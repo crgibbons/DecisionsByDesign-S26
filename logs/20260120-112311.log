@@ -1,0 +1,6 @@
+INFO    : Staging deployment according to strategy pelican_default
+INFO    : Staging `syllabus-web` at `/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/output/stage/syllabus`.
+INFO    : Staging `activities-web` at `/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/output/stage/worksheets`.
+INFO    : Staging `notes-web` at `/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/output/stage/notes`.
+ERROR   : Pelican is not installed. Please install Pelican to use this feature.
+INFO    : Initializing project with Git.

@@ -1,0 +1,5 @@
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/notes.ptx:7:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got introduction
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/notes.ptx:7:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element introduction there
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/notes.ptx:7:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got introduction
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/notes.ptx:7:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got introduction
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/notes.ptx:7:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element blockquote, got p

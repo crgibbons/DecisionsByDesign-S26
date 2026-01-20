@@ -1,0 +1,57 @@
+INFO    : Building target syllabus-print
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/output/syllabus-print.
+INFO    : discovering source file's directory name: /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source
+INFO    : verifying and expanding input directory: /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/generated-assets
+INFO    : verifying and expanding input directory: /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/../assets
+INFO    : input directory expanded to absolute path: /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/assets
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx to LaTeX as /var/folders/sg/hhl3k2ms7r39gz6p84b71psm0000gn/T/ptx-_qtvhxce/syllabus.tex
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/pretext-latex.xsl
+INFO    : XSL conversion of /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/source/syllabus.ptx by /Users/boss/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/boss/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Removing temporary directory /var/folders/sg/hhl3k2ms7r39gz6p84b71psm0000gn/T/ptx-_qtvhxce
+INFO    : Removing temporary directory /var/folders/sg/hhl3k2ms7r39gz6p84b71psm0000gn/T/ptx-g6m9ytsp
+INFO    : Removing temporary directory /var/folders/sg/hhl3k2ms7r39gz6p84b71psm0000gn/T/ptx-pz7194xr
+INFO    : 
+Success! The output is in /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/Decisions by Design/new-pretext-project/output/syllabus-print.
+
+INFO    : 

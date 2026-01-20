@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="notes">
+        <section xml:id="notes-week-01">
+        <title>Week 1</title>
+        <p>
+            This week we covered the following topics:
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Mathematical Modeling 
+                    <aside>
+                        <p>
+                            <b>Instructor note:</b> If you are planning this activity, you need a deck of cards that you can use to divide the class into six groups of four using one characteristic (suit) and then four groups of six using another characteristic (number) so that each group of six has a member from each group of four. You may have more than 24 students, in which case, adapt appropriately!
+                        </p>
+                    </aside>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Google NotebookLM
+                </p>
+            </li>
+        </ol>
+
+            <subsection>
+                <title>Mathematical Modeling</title>
+                <p> 
+                    We started reading the M3 Mathematical Modeling Materials from the Society for Industrial and Applied Mathematics. You should have a list describing the six stages of making a model.
+                </p>
+                <ol>
+                    <li><p> Defining the Problem Statement (Chapter 2) </p></li>
+                    <li><p> Making Assumptions (Chapter 3) </p></li>
+                    <li><p> Defining Variables (Chapter 4) </p></li>
+                    <li><p> Building Solutions (Chapter 5) </p></li>
+                    <li><p> Analysis and Model Assessment (Chapter 6) </p></li>
+                    <li><p> Putting it All Together (Chapter 7) </p></li>
+                </ol>
+                <p> 
+                    In groups, we read the M3 Challenge Problem and Solution, with each group focusing on a different stage of the modeling process. Then we mixed up into new groups to discuss how those processes fit together into a good overall solution to the challenge problem.
+                </p>
+            </subsection>
+
+            <subsection>
+                <title>Google NotebookLM</title>
+                <p>
+                    One of the first topics we'll study is <term>apportionment</term>.
+                </p>
+                <definition>
+                    <title>Apportionment</title>
+                    <statement>
+                        <p> 
+                            The term <term>apportionment</term> refers to the mathematical process of distributing a fixed number of indistinguishable assets among different entities.
+                        </p>
+                        <p>
+                            Each asset is indistinguishable from any other asset, and no asset can be subdivided.
+                        </p>
+                    </statement>
+                </definition>
+                <example>
+                    <title> Is it apportionment? </title>
+                    <statement>
+                        <p>
+                            For example, suppose Courtney buys 40 boxes of coffee (from the orange and pink doughnut shop down the hill) for the math department to bring to their classes. The department has to come up with a way to decide how many boxes each professor gets, perhaps using the number of students each professor is teaching as the main relevant piece of data to make this decision.
+                        </p>
+                        <p> 
+                            Each professor has to decide how to share the coffee among their classes. This need not be an apportionment problem.
+                        </p>
+                    </statement>
+                </example>
+                <p> 
+                    To dig into the primary source literature about a famous apportionment lawsuit, you will use Google NotebookLM as described in class.
+                </p>
+                <exercise>
+                    <title> NotebookLM set-up</title>
+                    <statement> 
+                        <ul>
+                            <li>
+                                <p>
+                                    One of your group members should use their Hamilton email account to log in at <url href="https://notebooklm.google.com/">Google NotebookLM</url>, then click <q>Create New</q>. That group members should also upload the SCOTUS transcript and SCOTUS opinion. Name the notebook something recognizable, like <q>SCOTUS Apportionment</q>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    The creator of the notebook should share it by adding the Hamilton email addresses of the other group members, with access to the full notebook.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Each group member will come up with a question they would like NotebookLM to answer about the source material, then save the reponse to the question as a note.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                     Finally, each group member will share their question and answer on the course blog, plus their strategy for fact-checking the answer and an assessment of how well NotebookLM did.
+                                </p>
+                            </li>
+                        </ul>
+                    </statement>
+                </exercise>
+                <p> 
+                    This is just our first foray into using a generative AI tool to enhance our learning. We will develop more skills to interact with NotebookLM throughout the course.
+                </p>
+            </subsection>
+            <subsection>
+                <title>Links of Interest</title>
+                <ul>
+                    <li>
+                        <p>
+                            <url href="https://www.census.gov/topics/public-sector/congressional-apportionment/about.html">About Congressional Apportionment</url> from the U.S. Census Bureau.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <url href="https://www.census.gov/topics/public-sector/congressional-apportionment/about/computing.html">Computing Apportionment</url> from the U.S. Census Bureau.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Note that the public availability of U.S. Census data is important for anyone who wants to see how different apportionment methods would work out!
+                </p>
+            </subsection>
+        </section>
+    </article>
+</pretext>

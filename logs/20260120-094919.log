@@ -1,0 +1,17 @@
+INFO    : Building target notes-web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes/week01.ptx:62:30:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: statement line 61 and definition
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes/week01.ptx:91:26:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: statement line 48 and subsection
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes/week01.ptx:92:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: definition line 46 and section
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes/week01.ptx:93:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: subsection line 41 and article
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes/week01.ptx:94:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 5 and pretext
+/Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes.ptx:13:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/boss/Library/CloudStorage/Dropbox/TEACHING/@Hamilton/new-pretext-project/source/notes/week01.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: boulder                        *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Decisions by Design: Applied Mathematics in Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="syllabus.html"><span class="title">Decisions by Design: Applied Mathematics in Society</span> <span class="subtitle">MATH-260</span></a></h1>
+<p class="byline">Dr. Courtney Gibbons</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button hidden" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar hidden"><nav id="ptx-toc" class="ptx-toc depth0"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html#sec-staff" class="internal"><span class="title">Professor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-staff-2" class="internal"><span class="title">Courtney Gibbons</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#subsec-office-hours" class="internal"><span class="title">Office Hours</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-materials" class="internal"><span class="title">Textbook and Other Required Materials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-grading" class="internal"><span class="title">Grading</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-environment" class="internal"><span class="title">Our Responsibilities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-responsibilities" class="internal"><span class="title">Your Responsibilities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-schedule" class="internal"><span class="title">Tentative Schedule of Topics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="syllabus.html#sec-inst-statements" class="internal"><span class="title">Institutional Syllabus Statements</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="article" id="syllabus"><section class="frontmatter" id="frontmatter"><h2 class="heading">
+<span class="title">Decisions by Design: Applied Mathematics in Society</span><span class="subtitle">MATH-260</span>
+</h2>
+<div class="author">
+<div class="author-name">Dr. Courtney Gibbons</div>
+<div class="author-info">Mathematics and Statistics<br>Hamilton College</div>
+</div>
+<div class="date">Last Updated: January 20, 2026</div>
+<div class="autopermalink" data-description="Front Matter"><a href="#frontmatter" title="Copy heading and permalink for Front Matter">🔗</a></div></section><section class="section" id="sec-course-info"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Course Information</span>
+</h2>
+<div class="para logical" id="sec-course-info-2">
+<dl class="description-list">
+<dt id="sec-course-info-2-1-1">Course Description<div class="autopermalink" data-description="Item: Course Description"><a href="#sec-course-info-2-1-1" title="Copy heading and permalink for Item: Course Description">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-course-info-2-1-1-2">This course introduces applied mathematics in various social contexts. Its focus is exploring how mathematical tools such as calculus, linear algebra, optimization, and algorithms help shape decision-making in real-world applications. Depending on instructor expertise and student interest, applications may include search algorithms, apportionment methods, resource allocation, political districting, and more. By the end of the course, students will be equipped with mathematical skills to analyze complex systems and think critically about how to deploy mathematics to solve real-world problems.<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-course-info-2-1-2">Educational Goals and More<div class="autopermalink" data-description="Item: Educational Goals and More"><a href="#sec-course-info-2-1-2" title="Copy heading and permalink for Item: Educational Goals and More">🔗</a></div>
+</dt>
+<dd><ul class="disc" id="sec-course-info-2-1-2-2">
+<li id="sec-course-info-2-1-2-2-1">
+<div class="para" id="sec-course-info-2-1-2-2-1-1">
+<dfn class="terminology">Itellectual Curiosity and Flexibility</dfn> You will examine primary source documents to understand facts, phenomena and issues in depth, and from a variety of perspectives. It will require courage to try different mathematical frameworks to make sense of the issue at hand, and it will require the flexibility to revise beliefs and outlooks in light of new evidence.<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-2-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-course-info-2-1-2-2-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-course-info-2-1-2-2-2">
+<div class="para" id="sec-course-info-2-1-2-2-2-1">
+<dfn class="terminology">Ethical, Informed and Engaged Citizenship</dfn>. You will develop an awareness of the challenges and responsibilities of local, national and global citizenship, and the ability to meet such challenges and fulfill such responsibilities by exercising informed judgment in accordance with just principles and sound mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-2-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-course-info-2-1-2-2-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-course-info-2-1-2-2-3">
+<div class="para" id="sec-course-info-2-1-2-2-3-1">Quantitative and Symbolic Reasoning (college-wide)<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-2-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-course-info-2-1-2-2-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-course-info-2-1-2-2-4">
+<div class="para" id="sec-course-info-2-1-2-2-4-1">Applied Mathematics requirement (math concentration)<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-2-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-course-info-2-1-2-2-4" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-course-info-2-1-2-2-5">
+<div class="para" id="sec-course-info-2-1-2-2-5-1">Ethics and Social Context (data science concentration)<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-2-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-course-info-2-1-2-2-5" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-course-info-2-1-2-2-6">
+<div class="para" id="sec-course-info-2-1-2-2-6-1">Social, Structural and Institutional Hierarchy (math and data science concentrations)<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-2-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-course-info-2-1-2-2-6" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul></dd>
+<dt id="sec-course-info-2-1-3">Prerequisites<div class="autopermalink" data-description="Item: Prerequisites"><a href="#sec-course-info-2-1-3" title="Copy heading and permalink for Item: Prerequisites">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-course-info-2-1-3-2">MATH 116 (Calculus 2), MATH 224W (Linear Algebra)<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="sec-course-info-3"><h3 class="heading"><span class="title">Meeting Times and Locations.</span></h3>
+<div class="para" id="sec-course-info-3-2">This course meets 10:30 am on Tuesdays and Thursdays in Christian Johnson 225.<div class="autopermalink" data-description="Paragraph"><a href="#sec-course-info-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Meeting Times and Locations"><a href="#sec-course-info-3" title="Copy heading and permalink for Paragraphs: Meeting Times and Locations">🔗</a></div></section><div class="autopermalink" data-description="Section: Course Information"><a href="#sec-course-info" title="Copy heading and permalink for Section: Course Information">🔗</a></div></section><section class="section" id="sec-staff"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Professor</span>
+</h2>
+<section class="subsection" id="sec-staff-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Courtney Gibbons</span>
+</h3>
+<aside class="aside aside-like" id="sec-staff-2-2"><div class="para" id="sec-staff-2-2-1">My pronouns are she/her/hers but I’m comfortable with they/them/theirs as well. I ask that you address me as “Courtney” or “Professor Gibbons”. Please do not address me as “Ms. Gibbons” or “Mrs. Gibbons”.<div class="autopermalink" data-description="Paragraph"><a href="#sec-staff-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside><div class="para logical" id="sec-staff-2-3">
+<div class="para"> </div>
+<dl class="description-list">
+<dt id="sec-staff-2-3-2-1">Title<div class="autopermalink" data-description="Item: Title"><a href="#sec-staff-2-3-2-1" title="Copy heading and permalink for Item: Title">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-staff-2-3-2-1-2">Associate Professor of Mathematics  Director of the Data Science Program Committee  Cat and Small Child Wrangler<div class="autopermalink" data-description="Paragraph"><a href="#sec-staff-2-3-2-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-staff-2-3-2-2">Email<div class="autopermalink" data-description="Item: Email"><a href="#sec-staff-2-3-2-2" title="Copy heading and permalink for Item: Email">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-staff-2-3-2-2-2">
+<a class="external" href="mailto:crgibbon@hamilton.edu" target="_blank">crgibbon@hamilton.edu</a><details class="ptx-footnote" aria-live="polite" id="sec-staff-2-3-2-2-2-2"><summary class="ptx-footnote__number" title="Footnote 1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-staff-2-3-2-2-2-2"><code class="code-inline tex2jax_ignore">mailto:crgibbon@hamilton.edu</code></div></details> <aside class="aside aside-like" id="sec-staff-2-3-2-2-2-3"><div class="para" id="sec-staff-2-3-2-2-2-3-1">The email address cgibbons@hamilton.edu also reaches my inbox, but my “official” email is the one listed above.<div class="autopermalink" data-description="Paragraph"><a href="#sec-staff-2-3-2-2-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside><div class="autopermalink" data-description="Paragraph"><a href="#sec-staff-2-3-2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-staff-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Courtney Gibbons"><a href="#sec-staff-2" title="Copy heading and permalink for Subsection: Courtney Gibbons">🔗</a></div></section><section class="subsection" id="subsec-office-hours"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Office Hours</span>
+</h3>
+<div class="para" id="subsec-office-hours-2">Students are welcome to drop in to my office hours. An up-to-date calendar is available on Google calendar and you can add it to your calendar app if you like: <a class="external" href="https://calendar.google.com/calendar/u/0?cid=Y19mMzVkODc5ZWFjN2MzY2M1MTQ4Njg5YWZkZDBmYmFiMDZhMDVkZmRlYzlkYTQ3OGY3ZjAxOGI0OWJmNjNhYmE5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank">Courtney’s Office Hours Calendar</a><details class="ptx-footnote" aria-live="polite" id="subsec-office-hours-2-2"><summary class="ptx-footnote__number" title="Footnote 2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-office-hours-2-2"><code class="code-inline tex2jax_ignore">calendar.google.com/calendar/u/0?cid=Y19mMzVkODc5ZWFjN2MzY2M1MTQ4Njg5YWZkZDBmYmFiMDZhMDVkZmRlYzlkYTQ3OGY3ZjAxOGI0OWJmNjNhYmE5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20</code></div></details><div class="autopermalink" data-description="Paragraph"><a href="#subsec-office-hours-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Office Hours"><a href="#subsec-office-hours" title="Copy heading and permalink for Subsection: Office Hours">🔗</a></div></section><div class="autopermalink" data-description="Section: Professor"><a href="#sec-staff" title="Copy heading and permalink for Section: Professor">🔗</a></div></section><section class="section" id="sec-materials"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Textbook and Other Required Materials</span>
+</h2>
+<div class="para logical" id="sec-materials-2">
+<dl class="description-list">
+<dt id="sec-materials-2-1-1">SIAM Modeling Resources<div class="autopermalink" data-description="Item: SIAM Modeling Resources"><a href="#sec-materials-2-1-1" title="Copy heading and permalink for Item: SIAM Modeling Resources">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-materials-2-1-1-2">This course does not have a text that you must purchase, but we will work through the modeling handbooks prepared for the Society for Industrial and Applied Mathematics’ M3 modeling contest: <a class="external" href="https://m3challenge.siam.org/what-is-math-modeling/modeling-handbooks/" target="_blank">M3 Handbooks</a><details class="ptx-footnote" aria-live="polite" id="sec-materials-2-1-1-2-2"><summary class="ptx-footnote__number" title="Footnote 3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="sec-materials-2-1-1-2-2"><code class="code-inline tex2jax_ignore">m3challenge.siam.org/what-is-math-modeling/modeling-handbooks/</code></div></details> (also available on Blackboard). We will also engage with primary source material from the Supreme Court of the United States and other entities.<div class="autopermalink" data-description="Paragraph"><a href="#sec-materials-2-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-materials-2-1-2">Blackboard<div class="autopermalink" data-description="Item: Blackboard"><a href="#sec-materials-2-1-2" title="Copy heading and permalink for Item: Blackboard">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-materials-2-1-2-2">Course materials will be posted to or linked from Blackboard, including homework and blog assignments. You are responsible for reading Blackboard announcements in a timely manner.<div class="autopermalink" data-description="Paragraph"><a href="#sec-materials-2-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-materials-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Textbook and Other Required Materials"><a href="#sec-materials" title="Copy heading and permalink for Section: Textbook and Other Required Materials">🔗</a></div></section><section class="section" id="sec-assessments"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Assessments</span>
+</h2>
+<section class="paragraphs" id="sec-assessments-2"><h3 class="heading"><span class="title">Homework and Blog Posts.</span></h3>
+<div class="para" id="sec-assessments-2-3">Each week you will have a series of problems to solve, proofs to write, and topics to respond to on our course blog.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Homework and Blog Posts"><a href="#sec-assessments-2" title="Copy heading and permalink for Paragraphs: Homework and Blog Posts">🔗</a></div></section><section class="paragraphs" id="sec-assessments-3"><h3 class="heading"><span class="title">Quizzes.</span></h3>
+<div class="para" id="sec-assessments-3-3">We will have quizzes at the end of major topics in the course.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Quizzes"><a href="#sec-assessments-3" title="Copy heading and permalink for Paragraphs: Quizzes">🔗</a></div></section><section class="paragraphs" id="sec-assessments-4"><h3 class="heading"><span class="title">Midterm.</span></h3>
+<div class="para" id="sec-assessments-4-3">The midterm exam will test your knowledge of the mathematical modeling process, mathematics we’ve covered in the course and where it appears in social context. Each student may be asked to analyze a new problem on the exam.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Midterm"><a href="#sec-assessments-4" title="Copy heading and permalink for Paragraphs: Midterm">🔗</a></div></section><section class="paragraphs" id="sec-assessments-5"><h3 class="heading"><span class="title">Final Exam.</span></h3>
+<div class="para" id="sec-assessments-5-3">The final exam will be like the midterm, but a little longer.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-5-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Final Exam"><a href="#sec-assessments-5" title="Copy heading and permalink for Paragraphs: Final Exam">🔗</a></div></section><section class="paragraphs" id="sec-assessments-6"><h3 class="heading"><span class="title">Active Engagement.</span></h3>
+<section class="paragraphs" id="sec-assessments-6-3"><div class="para" id="sec-assessments-6-3-1">Part of your grade will depend on your engagement in this course during class meetings, particularly during the segment of the course where students apply their knowledge in a <em class="emphasis">Reacting to the Past</em>role-playing game.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-6-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-assessments-6-3-2">Active engagement doesn’t necessarily mean talking a lot; it can also mean listening to your classmates and responding to their comments thoughtfully in a blog post or a homework assignment.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-6-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-assessments-6-3-3">If you know you talk a lot in class, this might be a good course in which to try active listening!<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-6-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-assessments-6-3-4">If you don’t like to speak up in classes, this is a good course to practice claiming some in-class air time for yourself.<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-6-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-assessments-6-3-5">Please come see me to talk about your goals for yourself as an active participant in the class!<div class="autopermalink" data-description="Paragraph"><a href="#sec-assessments-6-3-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs"><a href="#sec-assessments-6-3" title="Copy heading and permalink for Paragraphs">🔗</a></div></section><div class="autopermalink" data-description="Paragraphs: Active Engagement"><a href="#sec-assessments-6" title="Copy heading and permalink for Paragraphs: Active Engagement">🔗</a></div></section><div class="autopermalink" data-description="Section: Assessments"><a href="#sec-assessments" title="Copy heading and permalink for Section: Assessments">🔗</a></div></section><section class="section" id="sec-grading"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Grading</span>
+</h2>
+<div class="para" id="sec-grading-2">The grade components and their are all identified above. For quick reference, they are also summarized in the table below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-grading-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Component</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Weight</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Homework and Blog Posts</td>
+<td class="l m b0 r0 l0 t0 lines">10%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Quizzes</td>
+<td class="l m b0 r0 l0 t0 lines">10%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Midterm</td>
+<td class="l m b0 r0 l0 t0 lines">25%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Final</td>
+<td class="l m b0 r0 l0 t0 lines">25%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Active Engagement</td>
+<td class="l m b0 r0 l0 t0 lines">30%</td>
+</tr>
+</table></div>
+<div class="para" id="sec-grading-4">Grades will be calculated to two decimal places. They will <em class="emphasis">not</em> be rounded up to the next integer. The lower cutoff for each letter grade is given in the table below. It is possible that these cutoffs will be adjusted at the end of the semester. However, if this is done, it will only be done in a way that benefits students by lowering the cutoff to earn a given letter grade.<div class="autopermalink" data-description="Paragraph"><a href="#sec-grading-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Letter Grade</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Lower Cutoff</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">A</td>
+<td class="l m b0 r0 l0 t0 lines">94%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">A-</td>
+<td class="l m b0 r0 l0 t0 lines">90%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">B+</td>
+<td class="l m b0 r0 l0 t0 lines">87%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">B</td>
+<td class="l m b0 r0 l0 t0 lines">84%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">B-</td>
+<td class="l m b0 r0 l0 t0 lines">80%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">C+</td>
+<td class="l m b0 r0 l0 t0 lines">77%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">C</td>
+<td class="l m b0 r0 l0 t0 lines">74%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">C-</td>
+<td class="l m b0 r0 l0 t0 lines">70%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">D</td>
+<td class="l m b0 r0 l0 t0 lines">60%</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">0%</td>
+</tr>
+</table></div>
+<section class="paragraphs" id="sec-grading-6"><h3 class="heading"><span class="title">Incomplete Grades.</span></h3>
+<div class="para" id="sec-grading-6-2">Incomplete grades will be assigned only under extraordinary circumstances in accordance with L&amp;S policy, which states as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec-grading-6-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<blockquote class="blockquote" id="sec-grading-6-3">
+<div class="para" id="sec-grading-6-3-1">“An Incomplete (I) may be reported for a student who has been enrolled in a course with a passing grade until near the end of the semester/term and then, due to illness or some other unusual and substantiated cause beyond the student’s control, has been unable to take or complete the final examination (or to complete some limited amount of term work). An Incomplete is not given to a student who stays away from a final examination unless the student proves to the instructor that he or she was prevented from attending as indicated above. In the absence of such proof the grade reported will be an F. Even when a student can provide verifiable documentation, a student may still earn a grade of F if his/her work convinces the instructor that the student cannot successfully pass the course.”<div class="autopermalink" data-description="Paragraph"><a href="#sec-grading-6-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#sec-grading-6-3" title="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para" id="sec-grading-6-4">If you feel an incomplete grade may be warranted, you must contact me <em class="emphasis">before</em> the end of the final examination period on Friday, May 9, 2025.<div class="autopermalink" data-description="Paragraph"><a href="#sec-grading-6-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Incomplete Grades"><a href="#sec-grading-6" title="Copy heading and permalink for Paragraphs: Incomplete Grades">🔗</a></div></section><div class="autopermalink" data-description="Section: Grading"><a href="#sec-grading" title="Copy heading and permalink for Section: Grading">🔗</a></div></section><section class="section" id="sec-environment"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Our Responsibilities</span>
+</h2>
+<section class="paragraphs" id="sec-environment-2"><div class="para" id="sec-environment-2-1">The American Mathematical Society (the largest professional society for mathematicians) outlines its vision for a welcoming environment as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec-environment-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<blockquote class="blockquote" id="sec-environment-2-2">
+<div class="para" id="sec-environment-2-2-1">The AMS strives to ensure that participants in its activities enjoy a welcoming environment. In all its activities, the AMS seeks to foster an atmosphere that encourages the free expression and exchange of ideas. The AMS supports equality of opportunity and treatment for all participants, regardless of gender, gender identity or expression, race, color, national or ethnic origin, religion or religious belief, age, marital status, sexual orientation, disabilities, veteran status, or immigration status.... A commitment to a welcoming environment is expected of all attendees at AMS activities, including mathematicians, students, guests, staff, contractors and exhibitors, and participants in scientific sessions and social events.<div class="autopermalink" data-description="Paragraph"><a href="#sec-environment-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#sec-environment-2-2" title="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para" id="sec-environment-2-3">I am committed to making our classroom a lively and respectful community of thinkers. Please let me know if you feel that we are straying from this vision at any point during the semester.<div class="autopermalink" data-description="Paragraph"><a href="#sec-environment-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs"><a href="#sec-environment-2" title="Copy heading and permalink for Paragraphs">🔗</a></div></section><div class="autopermalink" data-description="Section: Our Responsibilities"><a href="#sec-environment" title="Copy heading and permalink for Section: Our Responsibilities">🔗</a></div></section><section class="section" id="sec-responsibilities"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Your Responsibilities</span>
+</h2>
+<section class="paragraphs" id="sec-responsibilities-3"><div class="para logical" id="sec-responsibilities-3-1">
+<dl class="description-list">
+<dt id="sec-responsibilities-3-1-1-1">Showing Up<div class="autopermalink" data-description="Item: Showing Up"><a href="#sec-responsibilities-3-1-1-1" title="Copy heading and permalink for Item: Showing Up">🔗</a></div>
+</dt>
+<dd> <section class="paragraphs" id="sec-responsibilities-3-1-1-1-2"><div class="para" id="sec-responsibilities-3-1-1-1-2-1">By enrolling in this class, you are agreeing to be an engaged student, to come to class with a learner’s attitude, and to encourage your fellow students to do the same. If you miss a class, it’s your responsibility to make up the material you missed by getting the notes from a classmate and reading the textbook.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-1-2-2">This class requires your tenacity and commitment to staying engaged throughout the semester. At times the assignments will be open-ended and require creativity and courage as you try solving problems that are different from those we cover in class.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs"><a href="#sec-responsibilities-3-1-1-1-2" title="Copy heading and permalink for Paragraphs">🔗</a></div></section>
+</dd>
+<dt id="sec-responsibilities-3-1-1-2">Reading and Writing<div class="autopermalink" data-description="Item: Reading and Writing"><a href="#sec-responsibilities-3-1-1-2" title="Copy heading and permalink for Item: Reading and Writing">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-responsibilities-3-1-1-2-2">There is <em class="emphasis">a lot of reading</em> in this course! We will engage with primary source material, including transcripts of SCOTUS cases, U.S. Census data, and other documents with embedded or implicit mathematics. As a reader, your responsibilities will include summarizing the big ideas in each source and extracting the mathematical content. You’ll show that you are fulfilling these responsibilities by writing summaries and exposition (and sometimes proofs) of the math involved.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-responsibilities-3-1-1-3">AI Policy<div class="autopermalink" data-description="Item: AI Policy"><a href="#sec-responsibilities-3-1-1-3" title="Copy heading and permalink for Item: AI Policy">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-responsibilities-3-1-1-3-2">The only acceptable use of generative AI will be explicitly described by your professor in class and on assignments. ChatGPT is never appropriate for this course. If your professor has not given you guidelines for how to use a specific AI tool (like Google’s NotebookLM) to complete an assignment, this means that the use of generative AI is not allowed for the assignment.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-responsibilities-3-1-1-4">The Honor Code and Getting Stuck<div class="autopermalink" data-description="Item: The Honor Code and Getting Stuck"><a href="#sec-responsibilities-3-1-1-4" title="Copy heading and permalink for Item: The Honor Code and Getting Stuck">🔗</a></div>
+</dt>
+<dd> <section class="paragraphs" id="sec-responsibilities-3-1-1-4-2"><div class="para" id="sec-responsibilities-3-1-1-4-2-1">You should be familiar with Hamilton’s <a class="external" href="https://www.hamilton.edu/student-handbook/studentconduct/honor-code" target="_blank">Honor Code</a><details class="ptx-footnote" aria-live="polite" id="sec-responsibilities-3-1-1-4-2-1-2"><summary class="ptx-footnote__number" title="Footnote 4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="sec-responsibilities-3-1-1-4-2-1-2"><code class="code-inline tex2jax_ignore">www.hamilton.edu/student-handbook/studentconduct/honor-code</code></div></details>. Section III commits you to report violations that you witness to your professor or a member of the honor court (preferably at the moment you witness it), or giving a warning to your peer. I expect you to honor these commitments as Hamilton community members.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-4-2-2">Section II.1 discusses plagiarism. In mathematics, this includes finding a solution and using any part of it without attribution, even if you _could_ have thought of the ideas on your own. This is one reason that I prohibit using unofficial online resources (like generative AI, which now includes most search engines that provide AI summaries!). The other reason is that it’s bad for your mathematical development. If you slip up and do use an unapproved resource, don’t plagiarize: cite your source.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-4-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-4-2-3">Remember, being stumped is part of learning mathematics, and making sense of the world is part of being a human! But you belong to community of other people sharing this experience. I encourage you to seek help when you need it from appropriate resources. These include office hours, the QSR, your classmates, your professor, and materials and databases you can access through the Hamilton College library.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-4-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-4-2-4">Working with collaborators is one of the best parts of mathematics! But write up your own solutions, andwhen working together, make sure everyone is able to (and encouraged to) contribute.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-4-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-4-2-5">If in doubt, check with Courtney before using resources explicitly listed in this syllabus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-4-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs"><a href="#sec-responsibilities-3-1-1-4-2" title="Copy heading and permalink for Paragraphs">🔗</a></div></section>
+</dd>
+<dt id="sec-responsibilities-3-1-1-5">Using Office Hours Productively<div class="autopermalink" data-description="Item: Using Office Hours Productively"><a href="#sec-responsibilities-3-1-1-5" title="Copy heading and permalink for Item: Using Office Hours Productively">🔗</a></div>
+</dt>
+<dd> <section class="paragraphs" id="sec-responsibilities-3-1-1-5-2"><div class="para" id="sec-responsibilities-3-1-1-5-2-1">If there are other people waiting to see me, say hi, introduce yourself, and see if you have the same questions. You can work together (and I encourage you to work together!) and then I can talk to a bunch of you together.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-5-2-2">Bring your professor to you. I like to go where you (and your collaborators) are working on problems together.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-5-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-5-2-3">Know the difference between collaboration (good) and copying someone else’s solution (bad). Active collaboration can take many forms: asking "Why?" a lot; explaining your thinking to someone else; passing the chalk around a group of people and taking turns at the blackboard working on a problem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-5-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-responsibilities-3-1-1-5-2-4">Collaboration is one of the best parts of being a mathematician. Enjoy it! Make friends! Solve problems! Get stuck! Get unstuck!<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1-1-5-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs"><a href="#sec-responsibilities-3-1-1-5-2" title="Copy heading and permalink for Paragraphs">🔗</a></div></section>
+</dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-responsibilities-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs"><a href="#sec-responsibilities-3" title="Copy heading and permalink for Paragraphs">🔗</a></div></section><div class="autopermalink" data-description="Section: Your Responsibilities"><a href="#sec-responsibilities" title="Copy heading and permalink for Section: Your Responsibilities">🔗</a></div></section><section class="section" id="sec-schedule"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Tentative Schedule of Topics</span>
+</h2>
+<div class="para logical" id="sec-schedule-2">
+<dl class="description-list">
+<dt id="sec-schedule-2-1-1">Week 1<div class="autopermalink" data-description="Item: Week 1"><a href="#sec-schedule-2-1-1" title="Copy heading and permalink for Item: Week 1">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-schedule-2-1-1-2">Mathematical Modeling<div class="autopermalink" data-description="Paragraph"><a href="#sec-schedule-2-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-schedule-2-1-2">Week 2<div class="autopermalink" data-description="Item: Week 2"><a href="#sec-schedule-2-1-2" title="Copy heading and permalink for Item: Week 2">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-schedule-2-1-2-2">Apportionment: Definitions and Examples<div class="autopermalink" data-description="Paragraph"><a href="#sec-schedule-2-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-schedule-2-1-3">Week 3<div class="autopermalink" data-description="Item: Week 3"><a href="#sec-schedule-2-1-3" title="Copy heading and permalink for Item: Week 3">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-schedule-2-1-3-2">Apportionment: Paradoxes and Proofs<div class="autopermalink" data-description="Paragraph"><a href="#sec-schedule-2-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-schedule-2-1-4">Week 4<div class="autopermalink" data-description="Item: Week 4"><a href="#sec-schedule-2-1-4" title="Copy heading and permalink for Item: Week 4">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-schedule-2-1-4-2">Rankings and Multivariate Data; Linear Algebra Review<div class="autopermalink" data-description="Paragraph"><a href="#sec-schedule-2-1-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-schedule-2-1-5">Week 5<div class="autopermalink" data-description="Item: Week 5"><a href="#sec-schedule-2-1-5" title="Copy heading and permalink for Item: Week 5">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-schedule-2-1-5-2">Principal Component Analysis and College Rankings<div class="autopermalink" data-description="Paragraph"><a href="#sec-schedule-2-1-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-schedule-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Tentative Schedule of Topics"><a href="#sec-schedule" title="Copy heading and permalink for Section: Tentative Schedule of Topics">🔗</a></div></section><section class="section" id="sec-inst-statements"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Institutional Syllabus Statements</span>
+</h2>
+<div class="para" id="sec-inst-statements-2">Accommodations, Conflicts, and Rescheduled Exams. The only assignments that may be rescheduled are exams. Except in the case of severe illness or emergency, I need advance notice so that we can arrange a make-up midterm for you. Give me notice at least one week prior to the exam that you have an academic accommodation or a conflict due to academics, a religious observance, work, athletics, or a student organization event. The final exam is scheduled by the registrar and can be rescheduled only in very specific circumstances: travel plans home for break don’t count, but three finals on the same day do.<div class="autopermalink" data-description="Paragraph"><a href="#sec-inst-statements-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Institutional Syllabus Statements"><a href="#sec-inst-statements" title="Copy heading and permalink for Section: Institutional Syllabus Statements">🔗</a></div></section><div class="autopermalink" data-description="Article: Decisions by Design: Applied Mathematics in Society"><a href="#syllabus" title="Copy heading and permalink for Article: Decisions by Design: Applied Mathematics in Society">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
