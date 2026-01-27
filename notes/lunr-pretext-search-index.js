@@ -44,51 +44,6 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Investigate on your own..",
   "body": " Investigate on your own.     Navigate to the shared notebook. You can ask questions via the chat!  Professor Gibbons created some Studio Output. What do you think of it?    Check out the flash cards. Are they useful?    Are there other outputs you would like the notebook to produce?    Are there questions you would be unlikely to ask the notebook? Why or why not?     "
-},
-{
-  "id": "notes-week-02",
-  "level": "1",
-  "url": "notes-week-02.html",
-  "type": "Section",
-  "number": "",
-  "title": "Week 2",
-  "body": " Week 2  This week we covered the basics of apportionment, plus how to use Google NotebookLM to help dig into primary source material.   Google NotebookLM  One of the first topics we'll study is apportionment .   Apportionment   The term apportionment refers to the mathematical process of distributing a fixed number of indistinguishable assets among different entities.  Each asset is indistinguishable from any other asset, and no asset can be subdivided.     Is it apportionment?   For example, suppose Courtney buys 40 boxes of coffee (from the orange and pink doughnut shop down the hill) for the math department to bring to their classes. The department has to come up with a way to decide how many boxes each professor gets, perhaps using the number of students each professor is teaching as the main relevant piece of data to make this decision.  Each professor has to decide how to share the coffee among their classes. This need not be an apportionment problem.    To dig into the primary source literature about a famous apportionment lawsuit, you will use Google NotebookLM as described in class.   NotebookLM set-up     One of your group members should use their Hamilton email account to log in at Google NotebookLM , then click Create New . That group members should also upload the SCOTUS transcript and SCOTUS opinion. Name the notebook something recognizable, like SCOTUS Apportionment .  You might also like to add additional webpages from the U.S. Census Bureau (see Links of Interest below) and the paper on Blackboard by David McCune, but these are optional (and you can toggle whether the notebook interface uses them to respond to a question by clicking the checkboxes on or off.    The creator of the notebook should share it by adding the Hamilton email addresses of the other group members, with access to the full notebook.    Each group member will come up with a question they would like NotebookLM to answer about the source material, then save the reponse to the question as a note.    Finally, each group member will share their question and answer on the course blog, plus their strategy for fact-checking the answer and an assessment of how well NotebookLM did.      This is just our first foray into using a generative AI tool to enhance our learning. We will develop more skills to interact with NotebookLM throughout the course.    Links of Interest     About Congressional Apportionment from the U.S. Census Bureau.     Computing Apportionment from the U.S. Census Bureau.    Note that the public availability of U.S. Census data is important for anyone who wants to see how different apportionment methods would work out!   "
-},
-{
-  "id": "notes-week-02-3-2",
-  "level": "2",
-  "url": "notes-week-02.html#notes-week-02-3-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "apportionment "
-},
-{
-  "id": "notes-week-02-3-3",
-  "level": "2",
-  "url": "notes-week-02.html#notes-week-02-3-3",
-  "type": "Definition",
-  "number": "5",
-  "title": "Apportionment.",
-  "body": " Apportionment   The term apportionment refers to the mathematical process of distributing a fixed number of indistinguishable assets among different entities.  Each asset is indistinguishable from any other asset, and no asset can be subdivided.   "
-},
-{
-  "id": "notes-week-02-3-4",
-  "level": "2",
-  "url": "notes-week-02.html#notes-week-02-3-4",
-  "type": "Example",
-  "number": "6",
-  "title": "Is it apportionment?",
-  "body": " Is it apportionment?   For example, suppose Courtney buys 40 boxes of coffee (from the orange and pink doughnut shop down the hill) for the math department to bring to their classes. The department has to come up with a way to decide how many boxes each professor gets, perhaps using the number of students each professor is teaching as the main relevant piece of data to make this decision.  Each professor has to decide how to share the coffee among their classes. This need not be an apportionment problem.   "
-},
-{
-  "id": "notes-week-02-3-6",
-  "level": "2",
-  "url": "notes-week-02.html#notes-week-02-3-6",
-  "type": "Checkpoint",
-  "number": "7",
-  "title": "NotebookLM set-up.",
-  "body": " NotebookLM set-up     One of your group members should use their Hamilton email account to log in at Google NotebookLM , then click Create New . That group members should also upload the SCOTUS transcript and SCOTUS opinion. Name the notebook something recognizable, like SCOTUS Apportionment .  You might also like to add additional webpages from the U.S. Census Bureau (see Links of Interest below) and the paper on Blackboard by David McCune, but these are optional (and you can toggle whether the notebook interface uses them to respond to a question by clicking the checkboxes on or off.    The creator of the notebook should share it by adding the Hamilton email addresses of the other group members, with access to the full notebook.    Each group member will come up with a question they would like NotebookLM to answer about the source material, then save the reponse to the question as a note.    Finally, each group member will share their question and answer on the course blog, plus their strategy for fact-checking the answer and an assessment of how well NotebookLM did.     "
 }
 ]
 
