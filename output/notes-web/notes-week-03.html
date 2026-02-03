@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: greeley                        *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Classes 3-5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.12';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="ch-course-notes.html"><span class="title">Course Notes</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="notes-week-02.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\NN}{\mathbb N}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\row}{row}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Class 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Mathematical Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Google NotebookLM</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Class 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Apportionment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Paradoxes (colloquially)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-5" class="internal"><span class="title">Google NotebookLM</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="notes-week-03.html" class="internal"><span class="title">Classes 3-5</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-4" class="internal"><span class="title">That’s not fair!</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="notes-week-03.html#apportionment-problem" class="internal"><span class="title">The Apportionment Problem, but Mathier</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="notes-week-03.html#apportionment-variables" class="internal"><span class="title">Formal Mathematical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="notes-week-03.html#exact-quota" class="internal"><span class="title">The (Exact) Quota</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="notes-week-03.html#apportionment-polyhedra" class="internal"><span class="title">Apportionment Polyhedra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="notes-week-03.html#polyhedron-geometry" class="internal"><span class="title">Geometric Representation</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="notes-week-03.html#apportionment-axioms" class="internal"><span class="title">Mathematical Constraints and Properties</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="notes-week-03.html#example-hamilton-method" class="internal"><span class="title">Hamilton’s Method as an Apportionment Function</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="notes-week-03"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Classes 3-5</span>
+</h2>
+<div class="para" id="notes-week-03-2">Why doesn’t the size of the House change anymore? <a class="external" href="https://public.tableau.com/views/Apportionment_16116063135030/Apportionment?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank">See how House would have to scale with the population over time at this interactive Census applet</a><details class="ptx-footnote" aria-live="polite" id="notes-week-03-2-2"><summary class="ptx-footnote__number" title="Footnote 2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="notes-week-03-2-2"><code class="code-inline tex2jax_ignore">public.tableau.com/views/Apportionment_16116063135030/Apportionment?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link</code></div></details><div class="autopermalink" data-description="Paragraph"><a href="#notes-week-03-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-week-03-3">Apportionment is rife with paradoxes. Let’s dig in.<div class="autopermalink" data-description="Paragraph"><a href="#notes-week-03-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="notes-week-03-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">That’s not fair!</span>
+</h3>
+<details id="notes-week-03-4-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">30</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="notes-week-03-4-2-1">In our CJ Coffee Distribution Scheme, there were some possibilities we didn’t consider. <figure class="table table-like" id="notes-week-03-4-2-1-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">31<span class="period">.</span></span><span class="space"> </span>Hamilton Apportionment<div class="autopermalink" data-description="Table 31: Hamilton Apportionment"><a href="#notes-week-03-4-2-1-1" title="Copy heading and permalink for Table 31: Hamilton Apportionment">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Prof.</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">A</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">B</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Ce</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Co</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">D</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">G</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Ka</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Ku</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">L</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">T</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Total</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Pop</td>
+<td class="l m b0 r0 l0 t0 lines">35</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines">71</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">38</td>
+<td class="l m b0 r0 l0 t0 lines">55</td>
+<td class="l m b0 r0 l0 t0 lines">73</td>
+<td class="l m b0 r0 l0 t0 lines">45</td>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">58</td>
+<td class="l m b0 r0 l0 t0 lines">485</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Q</td>
+<td class="l m b0 r0 l0 t0 lines">3.25</td>
+<td class="l m b0 r0 l0 t0 lines">5.57</td>
+<td class="l m b0 r0 l0 t0 lines">6.59</td>
+<td class="l m b0 r0 l0 t0 lines">2.04</td>
+<td class="l m b0 r0 l0 t0 lines">3.53</td>
+<td class="l m b0 r0 l0 t0 lines">5.10</td>
+<td class="l m b0 r0 l0 t0 lines">6.77</td>
+<td class="l m b0 r0 l0 t0 lines">4.18</td>
+<td class="l m b0 r0 l0 t0 lines">2.60</td>
+<td class="l m b0 r0 l0 t0 lines">5.38</td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\sim\)</span>485</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Boxes</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(45\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Boxes</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(45\)</span></td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#notes-week-03-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 30"><a href="#notes-week-03-4-2" title="Copy heading and permalink for Example 30">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: That’s not fair!"><a href="#notes-week-03-4" title="Copy heading and permalink for Subsection: That’s not fair!">🔗</a></div></section><section class="subsection" id="apportionment-problem"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">The Apportionment Problem, but Mathier</span>
+</h3>
+<section class="subsubsection" id="apportionment-variables"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Formal Mathematical Variables</span>
+</h4>
+<div class="para" id="apportionment-variables-2">The problem can be defined using the following parameters:<div class="autopermalink" data-description="Paragraph"><a href="#apportionment-variables-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<dl class="description-list"></dl>
+<div class="autopermalink" data-description="Subsubsection: Formal Mathematical Variables"><a href="#apportionment-variables" title="Copy heading and permalink for Subsubsection: Formal Mathematical Variables">🔗</a></div></section><section class="subsubsection" id="exact-quota"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">The (Exact) Quota</span>
+</h4>
+<div class="para" id="exact-quota-2">A central concept in apportionment is the <dfn class="terminology">exact quota</dfn>, denoted <span class="process-math">\(q_s\text{,}\)</span> which represents the ideal fractional share of units an entity would receive if units were divisible. It is defined by<div class="autopermalink" data-description="Paragraph"><a href="#exact-quota-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q_s = \frac{p_s}{P} M.
+\end{equation*}
+</div>
+<div class="para" id="exact-quota-4">In an ideal mathematical world, we would have <span class="process-math">\(m_s = q_s\text{.}\)</span> However, because <span class="process-math">\(m_s\)</span> must be an integer and <span class="process-math">\(q_s\)</span> is typically a rational number that is not an integer, an apportionment method is required to map the real vector of quotas to an integer vector of allocations.<div class="autopermalink" data-description="Paragraph"><a href="#exact-quota-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection: The (Exact) Quota"><a href="#exact-quota" title="Copy heading and permalink for Subsubsection: The (Exact) Quota">🔗</a></div></section><article class="definition definition-like" id="definition-apportionment-method"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">32</span><span class="period">.</span><span class="space"> </span><span class="title">Apportionment Method: a function!</span>
+</h4>
+<div class="para" id="definition-apportionment-method-2">Fix a positive integer <span class="process-math">\(M\)</span> and an integer <span class="process-math">\(n \ge 2\text{.}\)</span> Let <span class="process-math">\(\mathcal{Q} = \{\mathbf{q} \in \mathbb{R}_{\ge 0}^n : \sum_{s=1}^n q_s = M\}\)</span> denote the space of exact quota vectors, and let <span class="process-math">\(\mathcal{M} = \{\mathbf{m} \in \mathbb{Z}_{\ge 0}^n : \sum_{s=1}^n m_s = M\}\)</span> denote the set of feasible integer allocations.<div class="autopermalink" data-description="Paragraph"><a href="#definition-apportionment-method-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-apportionment-method-3">An <dfn class="terminology">apportionment method</dfn> is a function<div class="autopermalink" data-description="Paragraph"><a href="#definition-apportionment-method-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F : \mathcal{Q} \longrightarrow \mathcal{M}
+\end{equation*}
+</div>
+<div class="para" id="definition-apportionment-method-5">that assigns to each exact quota vector <span class="process-math">\(\mathbf{q}\)</span> a unique integer allocation <span class="process-math">\(\mathbf{m} = F(\mathbf{q})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-apportionment-method-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-apportionment-method-6">The method <span class="process-math">\(F\)</span> induces a partition of <span class="process-math">\(\mathcal{Q}\)</span> into regions<div class="autopermalink" data-description="Paragraph"><a href="#definition-apportionment-method-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(\mathbf{m}) = \{\mathbf{q} \in Q : F(\mathbf{q}) = \mathbf{m}\},
+\end{equation*}
+</div>
+<div class="para" id="definition-apportionment-method-8">called the <dfn class="terminology">apportionment polyhedra</dfn>. Each polyhedron consists of all exact quota vectors that are mapped to the same integer allocation.<div class="autopermalink" data-description="Paragraph"><a href="#definition-apportionment-method-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 32: Apportionment Method: a function!"><a href="#definition-apportionment-method" title="Copy heading and permalink for Definition 32: Apportionment Method: a function!">🔗</a></div></article><figure class="figure figure-like" id="apportionment-problem-5"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/apportionment-problem-5-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">33<span class="period">.</span></span><span class="space"> </span><div class="para" id="apportionment-problem-5-1-1">The positive orthant, <span class="process-math">\(\mathcal{Q}\text{,}\)</span> and <span class="process-math">\(\mathcal{M}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#apportionment-problem-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> with three states and five seats.<div class="autopermalink" data-description="Figure 33"><a href="#apportionment-problem-5" title="Copy heading and permalink for Figure 33">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection: The Apportionment Problem, but Mathier"><a href="#apportionment-problem" title="Copy heading and permalink for Subsection: The Apportionment Problem, but Mathier">🔗</a></div></section><section class="subsection" id="apportionment-polyhedra"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Apportionment Polyhedra</span>
+</h3>
+<div class="para" id="apportionment-polyhedra-2">An <dfn class="terminology">apportionment polyhedron</dfn> is a geometric region within the space of all possible exact quota vectors <span class="process-math">\(\mathbf{q}\)</span> that a particular apportionment method maps to a single, fixed integer seat allocation <span class="process-math">\(\mathbf{m}\text{.}\)</span> In mathematical terms, it consists of all fractional quota vectors that result in the same whole-number distribution of seats.<div class="autopermalink" data-description="Paragraph"><a href="#apportionment-polyhedra-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsubsection" id="polyhedron-geometry"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Geometric Representation</span>
+</h4>
+<div class="para" id="polyhedron-geometry-2">The concept is best understood by visualizing the space of exact quotas.<div class="autopermalink" data-description="Paragraph"><a href="#polyhedron-geometry-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="polyhedron-geometry-3">
+<li id="polyhedron-geometry-3-1">
+<div class="para" id="p-derived-polyhedron-geometry-3-1">
+<em class="emphasis">The set <span class="process-math">\(\mathcal{Q}\text{.}\)</span></em> This set contains all possible fractional distributions of <span class="process-math">\(M\)</span> items among <span class="process-math">\(n\)</span> entities. For example, if there are three parties and <span class="process-math">\(M = 5\)</span> seats, the set <span class="process-math">\(\mathcal{Q}\)</span> forms an equilateral triangle in three-dimensional space with vertices at <span class="process-math">\((5,0,0)\text{,}\)</span> <span class="process-math">\((0,5,0)\text{,}\)</span> and <span class="process-math">\((0,0,5)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#polyhedron-geometry-3-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="polyhedron-geometry-3-2">
+<div class="para" id="p-derived-polyhedron-geometry-3-2">
+<em class="emphasis">Integer points.</em> Within this geometric space, the possible integer seat allocations are represented by discrete lattice points corresponding to integer vectors <span class="process-math">\(\mathbf{m}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#polyhedron-geometry-3-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="polyhedron-geometry-3-3">
+<div class="para" id="p-derived-polyhedron-geometry-3-3">
+<em class="emphasis">Defining the polyhedra.</em> A valid apportionment method partitions the larger region <span class="process-math">\(Q\)</span> into smaller regions, or polyhedra, each associated with a single integer allocation. Any exact quota vector lying inside a given polyhedron is rounded or mapped to the integer allocation corresponding to that region.</div>
+<div class="autopermalink" data-description="Item"><a href="#polyhedron-geometry-3-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="polyhedron-geometry-4">The shape and size of apportionment polyhedra depend on the error function or rounding rule associated with the chosen apportionment method.<div class="autopermalink" data-description="Paragraph"><a href="#polyhedron-geometry-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="polyhedron-geometry-5">
+<li id="polyhedron-geometry-5-1">
+<div class="para" id="p-derived-polyhedron-geometry-5-1">
+<em class="emphasis">Mapping.</em> A desirable property of an apportionment method is that any exact quota vector that is already an integer vector is mapped to itself.</div>
+<div class="autopermalink" data-description="Item"><a href="#polyhedron-geometry-5-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="polyhedron-geometry-5-2">
+<div class="para" id="p-derived-polyhedron-geometry-5-2">
+<em class="emphasis">Borders.</em> The boundaries between apportionment polyhedra correspond to tie situations, where an exact quota vector may be equally compatible with two or more integer seat allocations. In such cases, the method must include a rule for resolving ties along these boundaries.</div>
+<div class="autopermalink" data-description="Item"><a href="#polyhedron-geometry-5-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="polyhedron-geometry-6">To find apportionment polyhedra given an apportionment function, it is useful to introduce <dfn class="terminology">barycentric coordinates</dfn>. Given a value <span class="process-math">\(M\text{,}\)</span> a barycentric <span class="process-math">\(n\)</span>-tuple <span class="process-math">\((q_1,q_2,\cdots,q_m)\)</span> satisfies the property that <span class="process-math">\(q_i \geq 0\)</span> for each coordinate and <span class="process-math">\(\sum_{i = 1}^n q_i = M\text{.}\)</span> We can imagine each tuple with an <span class="process-math">\(M\)</span> in one spot and zeros elsewhere to be sitting at the corner of an <span class="process-math">\(n\)</span>-dimensional simplex, which results from treating the tuple like the end of a vector with tail at the original in <span class="process-math">\(\mathbb{R}_{\geq 0}^n\text{.}\)</span> Given a coordinate <span class="process-math">\(q_i\text{,}\)</span> the face opposite its is the set of all barycentric coordinates with a zero in position <span class="process-math">\(i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#polyhedron-geometry-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="polyhedron-geometry-7"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/polyhedron-geometry-7-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">34<span class="period">.</span></span><span class="space"> </span><div class="para" id="polyhedron-geometry-7-1-1">Moving around the triangle where the barycentric coordinates sum to five. The barycentric tuple <span class="process-math">\(P = (2,2,1)\)</span> lies on the line <span class="process-math">\(q_2 = 2\)</span> (and the line <span class="process-math">\(q_1 = 2\text{,}\)</span> and the line <span class="process-math">\(q_3 = 1\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#polyhedron-geometry-7-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 34"><a href="#polyhedron-geometry-7" title="Copy heading and permalink for Figure 34">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsubsection: Geometric Representation"><a href="#polyhedron-geometry" title="Copy heading and permalink for Subsubsection: Geometric Representation">🔗</a></div></section><section class="subsubsection" id="apportionment-axioms"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Mathematical Constraints and Properties</span>
+</h4>
+<div class="para" id="apportionment-axioms-2">For an apportionment method to be considered fair or valid, it is often expected to satisfy certain mathematical axioms:<div class="autopermalink" data-description="Paragraph"><a href="#apportionment-axioms-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="apportionment-axioms-3">
+<li id="apportionment-axioms-3-1">
+<div class="para" id="p-derived-apportionment-axioms-3-1">
+<em class="emphasis">Symmetry.</em> The outcome should not depend on the order in which the entities are listed.</div>
+<div class="autopermalink" data-description="Item"><a href="#apportionment-axioms-3-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="apportionment-axioms-3-2">
+<div class="para" id="p-derived-apportionment-axioms-3-2">
+<em class="emphasis">Homogeneity.</em> If all input values <span class="process-math">\(q_j\)</span> are multiplied by the same positive constant, the resulting apportionment should remain unchanged.</div>
+<div class="autopermalink" data-description="Item"><a href="#apportionment-axioms-3-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="apportionment-axioms-3-3">
+<div class="para" id="p-derived-apportionment-axioms-3-3">
+<em class="emphasis">The Quota Rule.</em> A method satisfies this rule if each allocation <span class="process-math">\(m_j\)</span> is either <span class="process-math">\(\lfloor q_j \rfloor\)</span> or <span class="process-math">\(\lceil q_j \rceil\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#apportionment-axioms-3-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="apportionment-axioms-3-4">
+<div class="para" id="p-derived-apportionment-axioms-3-4">
+<em class="emphasis">House Monotonicity.</em> If the total number of units increases from <span class="process-math">\(M\)</span> to <span class="process-math">\(M+1\text{,}\)</span> no entity’s allocation <span class="process-math">\(m_j\)</span> should decrease. This property rules out paradoxes such as the Alabama Paradox.</div>
+<div class="autopermalink" data-description="Item"><a href="#apportionment-axioms-3-4" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="apportionment-axioms-4">The Balinski-Young Theorem essentially says that there is no apportionment rule that satisfies all of these criteria all the time!<div class="autopermalink" data-description="Paragraph"><a href="#apportionment-axioms-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection: Mathematical Constraints and Properties"><a href="#apportionment-axioms" title="Copy heading and permalink for Subsubsection: Mathematical Constraints and Properties">🔗</a></div></section><section class="subsubsection" id="example-hamilton-method"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Hamilton’s Method as an Apportionment Function</span>
+</h4>
+<div class="para" id="example-hamilton-method-2">Fix <span class="process-math">\(M\)</span> seats and <span class="process-math">\(n\)</span> entities. Given an exact quota vector <span class="process-math">\(\mathbf{q} \in \mathcal{Q}\text{,}\)</span> Hamilton’s method proceeds as follows:<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-method-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="example-hamilton-method-3">
+<li id="example-hamilton-method-3-1">
+<div class="para" id="p-derived-example-hamilton-method-3-1">Assign each entity its lower quota <span class="process-math">\(m_j = \lfloor q_j \rfloor\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#example-hamilton-method-3-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="example-hamilton-method-3-2">
+<div class="para" id="p-derived-example-hamilton-method-3-2">Distribute the remaining seats, one at a time, to the entities with the largest fractional remainders <span class="process-math">\(q_j - \lfloor q_j \rfloor\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#example-hamilton-method-3-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="example-hamilton-method-4">This defines an apportionment method <span class="process-math">\(F_{\text{Ham}} : \mathcal{Q} \to \mathcal{M}\text{,}\)</span> since every quota vector is mapped to a unique integer allocation.<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-method-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-hamilton-method-5">Geometrically, the apportionment polyhedra for Hamilton’s method are regions determined by inequalities comparing fractional parts of the quotas. The boundaries between polyhedra occur where two or more remainders are equal, leading to ties in the final seat assignment.<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-method-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-hamilton-method-6">Because these boundaries depend on global comparisons of remainders, the resulting polyhedra need not arise from minimizing a single global error function. This explains why Hamilton’s method can satisfy the Quota Rule while still exhibiting paradoxes such as the Alabama Paradox.<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-method-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-hamilton-polyhedron-coffee-3-6-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">35</span><span class="period">.</span><span class="space"> </span><span class="title">The Hamilton Polyhedron for an example..</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-2">Suppose we have <span class="process-math">\(M=15\)</span> boxes of coffee to distribute among three people (Ahmed, Gibbons, and Tripp) in proportion to their “need scores” <span class="process-math">\(\mathbf{a}=(35,55,58)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-3">The total is <span class="process-math">\(A = 35+55+58 = 148\text{,}\)</span> so the exact quotas are <span class="process-math">\(q_j = \dfrac{a_j}{A}M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-coffee-quotas"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">36<span class="period">.</span></span><span class="space"> </span>Exact quotas and remainders for 15 boxes<div class="autopermalink" data-description="Table 36: Exact quotas and remainders for 15 boxes"><a href="#table-coffee-quotas" title="Copy heading and permalink for Table 36: Exact quotas and remainders for 15 boxes">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Person</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><span class="process-math">\(a_j\)</span></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_j=\frac{a_j}{148}\cdot 15\)</span></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\lfloor q_j\rfloor\)</span></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Remainder</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Ahmed</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(35\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{525}{148}\approx 3.547\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\approx 0.547\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Gibbons</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(55\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{825}{148}\approx 5.574\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\approx 0.574\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Tripp</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(58\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{870}{148}\approx 5.878\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\approx 0.878\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-5">Using Hamilton’s (largest remainder) method, we first assign lower quotas: <span class="process-math">\((3,5,5)\text{,}\)</span> which totals <span class="process-math">\(13\)</span> boxes, leaving <span class="process-math">\(2\)</span> boxes to distribute. The two largest remainders are Tripp’s and Gibbons’s, so each receives one additional box.<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-hamilton-polyhedron-coffee-3-6-6-6">
+<div class="para">The final allocation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(m_{\text{Ahmed}},m_{\text{Gibbons}},m_{\text{Tripp}}) = (3,6,6).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-7">Consider Hamilton’s method on the quota simplex <span class="process-math">\(\mathcal{Q}=\{(q_A,q_G,q_T)\in\mathbb{R}_{\ge0}^3:\ q_A+q_G+q_T=15\}\text{.}\)</span> We describe the region of quota vectors that Hamilton maps to the allocation <span class="process-math">\((3,6,6)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-hamilton-polyhedron-coffee-3-6-6-8">
+<div class="para">For Hamilton’s method to output <span class="process-math">\((3,6,6)\text{,}\)</span> the lower-quota step must first produce</div>
+<ul class="disc" id="example-hamilton-polyhedron-coffee-3-6-6-8-2">
+<li id="example-hamilton-polyhedron-coffee-3-6-6-8-2-1">
+<div class="para" id="p-derived-example-hamilton-polyhedron-coffee-3-6-6-8-2-1">Two seats left: <span class="process-math">\((2,5,6)\text{,}\)</span> <span class="process-math">\((2,6,5)\text{,}\)</span> or <span class="process-math">\((3,5,5)\text{;}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-hamilton-polyhedron-coffee-3-6-6-8-2-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-hamilton-polyhedron-coffee-3-6-6-8-2-2">
+<div class="para" id="p-derived-example-hamilton-polyhedron-coffee-3-6-6-8-2-2">One seat left: <span class="process-math">\((2,6,6)\text{,}\)</span> <span class="process-math">\((3,5,6)\text{,}\)</span> or <span class="process-math">\((3,6,5)\text{;}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-hamilton-polyhedron-coffee-3-6-6-8-2-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-hamilton-polyhedron-coffee-3-6-6-8-2-3">
+<div class="para" id="p-derived-example-hamilton-polyhedron-coffee-3-6-6-8-2-3">No seats left: <span class="process-math">\((3,6,6)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-hamilton-polyhedron-coffee-3-6-6-8-2-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-9">In our example, we have the scenario that the lower quotas produce <span class="process-math">\((3,5,5)\text{,}\)</span> and the remainders satisfy <span class="process-math">\(r_G \gt r_A\text{,}\)</span> <span class="process-math">\(r_T &gt; r_A\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3 \le q_A &lt; 4,\qquad 5 \le q_G &lt; 6,\qquad 5 \le q_T &lt; 6,
+\qquad q_A+q_G+q_T=15.
+\end{equation*}
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-11">Write the remainders as <span class="process-math">\(r_A=q_A-3\text{,}\)</span> <span class="process-math">\(r_G=q_G-5\text{,}\)</span> and <span class="process-math">\(r_T=q_T-5\text{.}\)</span> To award the two remaining seats to Gibbons and Tripp (and not to Ahmed), we need the two inequalities<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r_G &gt; r_A,\qquad r_T &gt; r_A.
+\end{equation*}
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-13">Equivalently, these are linear conditions on the quotas:<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q_G - q_A &gt; 2,\qquad q_T - q_A &gt; 2.
+\end{equation*}
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-15">Therefore, part of the (open) Hamilton region mapping to <span class="process-math">\((3,6,6)\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(3,6,6) \supseteq
+\left\{
+(q_A,q_G,q_T)\in Q:
+\begin{array}{l}
+3 \le q_A &lt; 4,\ 5 \le q_G &lt; 6,\ 5 \le q_T &lt; 6,\\
+q_G-q_A &gt; 2,\ q_T-q_A &gt; 2
+\end{array}
+\right\}.
+\end{equation*}
+</div>
+<div class="para" id="example-hamilton-polyhedron-coffee-3-6-6-17">The boundary of this region consists of tie situations, such as <span class="process-math">\(r_G=r_A\)</span> or <span class="process-math">\(r_T=r_A\text{,}\)</span> together with the grid oundaries where a quota crosses an integer and a lower quota changes (for example, <span class="process-math">\(q_G=6\)</span>). A complete closed polyhedron requires a specified tie-breaking rule on these boundary sets.<div class="autopermalink" data-description="Paragraph"><a href="#example-hamilton-polyhedron-coffee-3-6-6-17" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 35: The Hamilton Polyhedron for an example."><a href="#example-hamilton-polyhedron-coffee-3-6-6" title="Copy heading and permalink for Example 35: The Hamilton Polyhedron for an example.">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection: Hamilton’s Method as an Apportionment Function"><a href="#example-hamilton-method" title="Copy heading and permalink for Subsubsection: Hamilton’s Method as an Apportionment Function">🔗</a></div></section><div class="autopermalink" data-description="Subsection: Apportionment Polyhedra"><a href="#apportionment-polyhedra" title="Copy heading and permalink for Subsection: Apportionment Polyhedra">🔗</a></div></section><div class="autopermalink" data-description="Section: Classes 3-5"><a href="#notes-week-03" title="Copy heading and permalink for Section: Classes 3-5">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="notes-week-02.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

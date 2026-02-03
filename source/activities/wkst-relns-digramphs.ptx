@@ -1,582 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Worksheet contributed by Mitch Keller -->
  
-<worksheet xml:id="wkst-relns-digraphs">
-  <title>Relations and Digraphs</title>
+<worksheet xml:id="wkst-convex-geometry">
+
+<title>Apportionment as Geometry: Hamilton and Webster on the Simplex</title>
   <page>
-    <exercise workspace="0.5in">
-      <statement>
-        <p>
-          Each matrix below represents a relation. The rows and columns are numbered <m>1</m> through <m>3</m> or <m>4</m>. Give the arrow diagram for each matrix, then express each relation as a set of ordered pairs.
+  <introduction>
+    <p>
+      In this activity you will treat apportionment methods as functions from a continuous
+      <em>quota space</em> to discrete integer allocations. You will visualize Hamilton’s method
+      and Webster’s method as geometric partitions of a simplex.
+    </p>
 
-          <ol cols="3" marker="(a)">
-            <li>
-              <m>\begin{bmatrix}
-                0 \amp 1 \amp 0 \\
-                1 \amp 0 \amp 0 \\
-                0 \amp 0 \amp 1
-                \end{bmatrix}</m>
-              </li>
-              <li>
-                <m>
-                  \begin{bmatrix}
-                  1 \amp 1 \amp 0 \\
-                  0 \amp 0 \amp 0 \\
-                  1 \amp 0 \amp 1
-                  \end{bmatrix}
-                </m>
-              </li>
-              <li>
-                <m>
-                  \begin{bmatrix}
-                  1 \amp 0 \amp 0 \amp 1 \\
-                  0 \amp 0 \amp 1 \amp 0 \\
-                  1 \amp 0 \amp 0 \amp 0 \\
-                  0 \amp 1 \amp 0 \amp 1
-                  \end{bmatrix}</m>
-                </li>
-              </ol>
-            </p>
-          </statement>
+    <p>
+      Throughout this worksheet we work on the simplex
+      <m>\Delta_4=\{(x,y,z)\in\mathbb{R}_{\ge 0}^3 : x+y+z=4\}</m>.
+    </p>
+  </introduction>
 
-          <solution component="w1s">
-            <p>
-              <ol marker="(a)">
-                <li>
-                  <p>
-                    From the given matrix, we see that <m>2 R 1, 1 R 2</m>, and <m>3 R 3</m>. Therefore, the set of ordered pairs for this relation is <m>\{(1,2), (2,1), (3,3)\}</m>. The arrow diagram is shown below at left.
-                  </p>
-                </li>
+  <!-- ===================================================== -->
+  <section xml:id="barycentric-coordinates">
+    <title>Barycentric Coordinates and the Simplex</title>
 
-                <li>
-                  From the given matrix, we see that <m>1 R 1, 1 R 2, 3 R 1,</m> and <m>3 R 3</m>. Hence, the set of ordered pairs for this relation is <m>\{ (1,1), (1,2), (3,1), (3,3) \}</m>. The arrow diagram is shown below at center.
-                </li>
+    <p>
+      The plane slice <m>x+y+z=4</m> in the positive orthant is represented by an equilateral triangle.
+      Each point in the triangle corresponds to a triple with nonnegative coordinates summing to 4.
+      The vertices correspond to <m>(4,0,0)</m>, <m>(0,4,0)</m>, and <m>(0,0,4)</m>.
+    </p>
 
-                <li>
-                  Reading the matrix, we see <m>1 R 1, 1 R 4, 2 R 3, 3 R 1, 4 R 2</m>, and <m>4 R 4</m>. The set of ordered pairs will therefore be <m>\{(1,1), (1,4), (2,3), (3,1), (4,2), (4,4)\}</m>. The arrow diagram is shown below at right.
-                </li>
-              </ol>
-            </p>
-            <sidebyside widths="30% 30% 30%">
-              <image width="70%">
-                <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-1-a">
-                  <diagram dimensions="(200,200)" margins="10">
-                    <coordinates bbox="(-0.25,-1.25,2.25,0.25)">
-                      <network directed="yes" scale="0.8" arrows="end"
-                      node-fill="white" node-stroke="black"
-                      seed="1" labels="yes"
-                      tactile-node-size="40" node-size="25" >
-
-                      <node at="1" p="(0,0)" edges="[2]" />
-                      <node at="2" p="(2,0)" edges="[1]" />
-                      <node at="3" p="(1,-1)" />
-                      <edge vertices="(3,3)" loop-scale="(0.5,0.5)"/>
-                    </network>
-                  </coordinates>
-                </diagram>
-              </prefigure>
-            </image>
-            <image width="70%">
-              <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-1-b">
-                <diagram dimensions="(200,200)" margins="10">
-                  <coordinates bbox="(-0.5,-1.25,2.5,0.5)">
-                    <network directed="yes" scale="0.8" arrows="end"
-                    node-fill="white" node-stroke="black"
-                    seed="1" labels="yes" loop-scale="(0.5,0.5)"
-                    tactile-node-size="40" node-size="25" >
-
-                    <node at="1" p="(0,0)" edges="[1,2]" loop-orientation="90" />
-                    <node at="2" p="(2,0)" />
-                    <node at="3" p="(1,-1)" edges="[1,3]" loop-orientation="0"/>
-                    <edge vertices="(1,1)" loop-scale="(0.5,0.5)" />
-                    <edge vertices="(3,3)" loop-scale="(0.5,0.5)" />
-                  </network>
-                </coordinates>
-              </diagram>
-            </prefigure>
-          </image>
-          <image width="70%">
-            <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-1-c">
-              <diagram dimensions="(200,200)" margins="10">
-                <coordinates bbox="(-0.65,-1.5,2.65,0.5)">
-                  <network directed="yes" scale="0.8" arrows="end"
-                  node-fill="white" node-stroke="black"
-                  seed="1" labels="yes"
-                  tactile-node-size="40" node-size="25" >
-
-                  <node at="1" p="(0,0)" edges="[4]" />
-                  <node at="2" p="(2,0)" edges="[3]" />
-                  <node at="3" p="(0,-1)" edges="[1]" />
-                  <node at="4" p="(2,-1)" edges="[2]" />
-                  <edge vertices="(1,1)" loop-scale="(0.5,0.5)"/>
-                  <edge vertices="(4,4)" loop-scale="(0.5,0.5)"/>
-                </network>
-              </coordinates>
-            </diagram>
-          </prefigure>
-        </image>
-      </sidebyside>
-    </solution>
-  </exercise>
-
-  <exercise workspace="0.5in">
-    <statement>
-      <p>
-        Give the matrix representation for the relation depicted in each arrow diagram. Then express the relation as a set of ordered pairs.
-      </p>
-      <figure xml:id="fig-wksheet-12-arrow-diags-to-pairs">
-        <caption></caption>
-        <sidebyside widths="20% 20% 20%">
-          <figure>
-            <caption/>
-            <image width="70%">
-              <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-2-a">
-                <diagram dimensions="(200,200)" margins="10">
-                  <coordinates bbox="(-0.75,-1.25,2.25,0.5)">
-                    <network directed="yes" scale="0.8" arrows="end"
-                    node-fill="white" node-stroke="black"
-                    seed="1" labels="yes"
-                    tactile-node-size="40" node-size="25" >
-
-                    <node at="1" p="(0,0)" edges="[1,2,3]" />
-                    <node at="2" p="(2,0)" edges="[]" />
-                    <node at="3" p="(1,-1)" />
-                    <edge vertices="(1,1)" loop-scale="(0.5,0.5)"/>
-                  </network>
-                </coordinates>
-              </diagram>
-            </prefigure>
-          </image>
-        </figure>
-        <figure>
-          <caption/>
-          <image width="70%">
-            <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-2-b">
-              <diagram dimensions="(200,200)" margins="10">
-                <coordinates bbox="(-0.75,-1.25,2.75,0.5)">
-                  <network directed="yes" scale="0.8" arrows="end"
-                  node-fill="white" node-stroke="black"
-                  seed="1" labels="yes"
-                  tactile-node-size="40" node-size="25" >
-
-                  <node at="1" p="(0,0)" edges="[1,3]" />
-                  <node at="2" p="(2,0)" edges="[2,3]" />
-                  <node at="3" p="(1,-1)" />
-                  <edge vertices="(1,1)" loop-scale="(0.5,0.5)"/>
-                  <edge vertices="(2,2)" loop-scale="(0.5,0.5)"/>
-                </network>
-              </coordinates>
-            </diagram>
-          </prefigure>
-        </image>
-      </figure>
-      <figure>
-        <caption/>
-        <image width="70%">
-          <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-2-c">
-            <diagram dimensions="(200,200)" margins="10">
-              <coordinates bbox="(-0.65,-1.6,2.65,0.65)">
-                <network directed="yes" scale="0.8" arrows="end"
-                node-fill="white" node-stroke="black"
-                seed="1" labels="yes"
-                tactile-node-size="40" node-size="25" >
-
-                <node at="1" p="(0,0)" edges="[1,4]" loop-orientation="90"/>
-                <node at="2" p="(2,0)" edges="[2]" />
-                <node at="3" p="(0,-1)" edges="[3]" loop-orientation="270" />
-                <node at="4" p="(2,-1)" edges="[1,2]" loop-orientation="270" />
-                <edge vertices="(1,1)" loop-scale="(0.5,0.5)"/>
-                <edge vertices="(2,2)" loop-scale="(0.5,0.5)"/>
-                <edge vertices="(3,3)" loop-scale="(0.5,0.5)"/>
-                <edge vertices="(4,4)" loop-scale="(0.5,0.5)"/>
-              </network>
-            </coordinates>
-          </diagram>
-        </prefigure>
-      </image>
+    <figure xml:id="barycentric-grid">
+      <caption>Barycentric grid for <m>x+y+z=4</m>.</caption>
+      <image source="barycentric-grid.pdf"/>
     </figure>
-  </sidebyside>
-</figure>
-</statement>
-<solution component="w1s">
-  <p>
-    <ol>
-      <li>
-        <p>
-          From the diagram, we deduce that the set of ordered pairs representing this relation will be <m>\{ (1,1), (1,2), (1,3)\}</m>.
-          The matrix representation will thus be
-          <me>
-            \begin{bmatrix}
-            1 \amp 1 \amp 1 \\
-            0 \amp 0 \amp 0 \\
-            0 \amp 0 \amp 0
-            \end{bmatrix}
-          </me>.
-        </p>
-      </li>
 
-      <li>
+    <exercise xml:id="reading-coordinates">
+      <statement>
         <p>
-          The relation as a set of ordered pairs can be expressed as <m>\{(1,1), (1,3), (2,2), (2,3)\}</m>.
-          The matrix representation is
-          <me>
-            \begin{bmatrix}
-            1 \amp 0 \amp 1 \\
-            0 \amp 1 \amp 1 \\
-            0 \amp 0 \amp 0
-            \end{bmatrix}
-          </me>.
+          Mark each point on the barycentric triangle and explain how you located it:
         </p>
-      </li>
+        <p>
+          <m>(2,1,1)</m>, <m>(3,1,0)</m>, <m>(1,2,1)</m>.
+        </p>
+      </statement>
+    </exercise>
 
-      <li>
+    <exercise xml:id="integer-lattice">
+      <statement>
         <p>
-          As a set of ordered pairs, the relation can be described as <m>\{(1,1), (1,4), (2,2), (3,3), (4,1), (4,4)\}</m>.
-          The matrix representation will be
-          <me>
-            \begin{bmatrix}
-            1 \amp 0 \amp 0 \amp 1 \\
-            0 \amp 1 \amp 0 \amp 0 \\
-            0 \amp 0 \amp 1 \amp 0 \\
-            1 \amp 0 \amp 0 \amp 1
-            \end{bmatrix}
-          </me>.
+          How many integer triples satisfy <m>x+y+z=4</m>?
         </p>
-      </li>
-    </ol>
-  </p>
-</solution>
-</exercise>
-<exercise workspace="1in">
-  <introduction>
+        <p>
+          How many of these lie on the boundary of the simplex? How many are strictly interior?
+        </p>
+      </statement>
+    </exercise>
+
+  </section>
+
+  <!-- ===================================================== -->
+  <section xml:id="hamilton-method">
+    <title>Hamilton’s Method as a Function</title>
+
     <p>
-      Draw the arrow diagram and the matrix representation for each relation.
+      Let <m>q=(x,y,z)\in\Delta_4</m>. Hamilton’s method produces an integer allocation
+      <m>m=(m_1,m_2,m_3)</m> with total 4.
     </p>
-  </introduction>
 
-  <task>
-    <statement>
-      <p>
-        The domain for relation <m>R</m> is <m>\{1,2,3,4\}</m> and <m>R = \{(1,2), (2,1), (3,3)\}</m>.
-      </p>
-    </statement>
+    <definition xml:id="hamilton-definition">
+      <title>Hamilton’s Method</title>
+      <statement>
+        <ol>
+          <li>
+            Compute the lower quota vector
+            <m>\ell=(\lfloor x\rfloor,\lfloor y\rfloor,\lfloor z\rfloor)</m>.
+          </li>
+          <li>
+            Let <m>s=4-(\ell_1+\ell_2+\ell_3)</m> be the number of surplus seats.
+          </li>
+          <li>
+            Let <m>r_i=q_i-\lfloor q_i\rfloor</m> be the fractional parts.
+            Let <m>S(q)</m> be the set of indices corresponding to the <m>s</m> largest remainders.
+          </li>
+          <li>
+            Define
+            <m>H(q)=\ell+\sum_{i\in S(q)} e_i</m>.
+          </li>
+        </ol>
+      </statement>
+    </definition>
 
-    <solution component="w1s">
-      <sidebyside widths="48% 48%">
-        <image width="100%">
-          <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-3-a">
-            <diagram dimensions="(200,200)" margins="5">
-              <coordinates bbox="(-0.5,-1.5,1.5,0.5)">
-                <network directed="yes" scale="0.8"
-                node-fill="#ffffff" node-stroke="black"
-                seed="1" labels="yes"
-                tactile-node-size="40" node-size="15" >
+    <exercise xml:id="hamilton-preimage">
+      <statement>
+        <p>
+          Fix an integer allocation <m>m</m>. In your own words, describe what the region
+        </p>
+        <p>
+          <m>H^{-1}(m)=\{q\in\Delta_4 : H(q)=m\}</m>
+        </p>
+        <p>
+          represents geometrically.
+        </p>
+      </statement>
+    </exercise>
 
-                <node at="1" p="(0,0)" edges="[2]" label="1" />
-                <node at="2" p="(1,0)" edges="[1]" label="2" />
-                <node at="3" p="(0,-1)" edges="[3]" label="3" loop-orientation="90"/>
-                <node at="4" p="(1,-1)" edges="[]" label="4" />
-                <edge vertices="(3,3)" loop-scale="(0.5,0.5)"/>
-              </network>
-            </coordinates>
-          </diagram>
-        </prefigure>
-      </image>
-      <p>
-        The arrow diagram is shown at left. The matrix representation is
+    <exercise xml:id="hamilton-slabs">
+      <statement>
+        <p>
+          Let <m>m=(2,1,1)</m> and consider the surplus set <m>S=\{1,2\}</m>.
+        </p>
+
+        <p>
+          (a) Compute the corresponding lower quota vector <m>\ell</m> defined by
+        </p>
+
         <me>
-          \begin{bmatrix}
-          0 \amp 1 \amp 0 \amp 0\\
-          1 \amp 0 \amp 0 \amp 0\\
-          0 \amp 0 \amp 1 \amp 0\\
-          0 \amp 0 \amp 0 \amp 0
-          \end{bmatrix}
-        </me>.
+          \ell_i =
+          \begin{cases}
+          m_i-1, &amp; i\in S,\\
+          m_i, &amp; i\notin S.
+          \end{cases}
+        </me>
 
-      </p>
-    </sidebyside>
-  </solution>
-</task>
+        <p>
+          (b) Write the slab inequalities <m>\ell_i \le q_i &lt; \ell_i+1</m> explicitly.
+        </p>
+      </statement>
+    </exercise>
 
-<task>
-  <statement>
+    <exercise xml:id="hamilton-halfspaces">
+      <statement>
+        <p>
+          For <m>S=\{1,2\}</m>, Hamilton requires
+        </p>
+
+        <me>
+          r_1 \ge r_3, \qquad r_2 \ge r_3.
+        </me>
+
+        <p>
+          Rewrite these conditions as linear inequalities in <m>x,y,z</m>.
+          You may use the constraint <m>x+y+z=4</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="hamilton-plot">
+      <statement>
+        <p>
+          On the barycentric grid:
+        </p>
+
+        <ul>
+          <li>Draw the slab region.</li>
+          <li>Draw the two boundary lines where remainders are equal.</li>
+          <li>Shade the region corresponding to <m>S=\{1,2\}</m>.</li>
+        </ul>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="hamilton-union">
+      <statement>
+        <p>
+          For <m>m=(2,1,1)</m>:
+        </p>
+
+        <ol>
+          <li>List the other possible surplus sets <m>S</m>.</li>
+          <li>For each, compute the corresponding slabs and remainder inequalities.</li>
+          <li>Sketch each region and combine them to approximate <m>H^{-1}(2,1,1)</m>.</li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="hamilton-practice">
+      <statement>
+        <p>
+          Choose another interior allocation <m>m</m> (all coordinates positive).
+          Outline the steps you would take to compute <m>H^{-1}(m)</m>.
+        </p>
+      </statement>
+    </exercise>
+
+  </section>
+
+  <!-- ===================================================== -->
+  <section xml:id="webster-method">
+    <title>Webster’s Method and Divisor Scaling</title>
+
     <p>
-      The domain for relation <m>R</m> is <m>\{1,2,3\}</m>, and <m>R = \varnothing</m>.
-    </p>
-  </statement>
-
-  <solution component="w1s">
-    <sidebyside widths="48% 48%">
-      <image width="100%">
-        <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-3-b">
-          <diagram dimensions="(200,200)" margins="10">
-            <coordinates bbox="(-0.75,-1.25,2.25,0.5)">
-              <network directed="yes" scale="0.8" arrows="end"
-              node-fill="white" node-stroke="black"
-              seed="1" labels="yes"
-              tactile-node-size="40" node-size="25" >
-
-              <node at="1" p="(0,0)" edges="[]" />
-              <node at="2" p="(2,0)" edges="[]" />
-              <node at="3" p="(1,-1)" />
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    <p>
-      The arrow diagram is shown at left. The matrix representation is
-      <me>
-        \begin{bmatrix}
-        0 \amp 0 \amp 0\\
-        0 \amp 0 \amp 0\\
-        0 \amp 0 \amp 0
-        \end{bmatrix}
-      </me>.
-
-    </p>
-  </sidebyside>
-</solution>
-</task>
-</exercise>
-<exercise workspace="1in">
-  <statement>
-    <p>
-      In this problem, state the definitions of the following properties of binary relations: Reflexive, Anti-reflexive or Irreflexive, Symmetric, Antisymmetric, and Transitive.
-    </p>
-  </statement>
-
-  <solution component="w1s">
-    <p>
-      For all of these, let <m>R</m> be a binary relation on a set <m>A</m>.
-      <dl>
-        <li>
-          <title>
-            Reflexive:
-          </title>
-
-          <p>
-            <m>R</m> is reflexive if and only if for every <m>x \in A</m>, <m>x R x</m>.
-          </p>
-        </li>
-        
-        <li>
-          <title>
-            Anti-Reflexive or Irreflexive:
-          </title>
-
-          <p>
-            <m>R</m> is anti-reflexive or irreflexive if and only if for every <m>x \in A</m>, <m>x \not \mathrel{R} x</m> (i.e., <m>x</m> is not related to itself).
-          </p>
-        </li>
-        
-        <li>
-          <title>
-            Symmetric:
-          </title>
-
-          <p>
-            <m>R</m> is symmetric if and only if for every all <m>x,y \in A</m>, <m>x R y</m> if and only if <m>y R x</m>. (Note that this also means that <m>R</m> is symmetric if and only if for all <m>x,y \in A</m>, <m>x \not \mathrel{R} y</m> if and only if <m>y \not \mathrel{R} x</m>.)
-          </p>
-        </li>
-        
-        <li>
-          <title>
-            Antisymmetric:
-          </title>
-
-          <p>
-            <m>R</m> is antisymmetric if and only if for all <m>x,y \in A</m>, if <m>x \ne y</m>, then <m>x R y</m> and <m>y R x</m> cannot both be true. (So, for every pair of distinct elements in <m>A</m>, one of the following holds: <m>xRy</m> but <m>y \not \mathrel{R} x</m>, <m>y R x</m> but <m>x \not \mathrel{R} y</m>, or <m>x \not \mathrel{R} y</m> and <m>y \not \mathrel{R} x</m>.)
-          </p>
-        </li>
-        
-        <li>
-          <title>
-            Transitive
-          </title>
-
-          <p>
-            <m>R</m> is transitive if and only if for all <m>x,y,z \in A</m>, if <m>x R y</m> and <m>y R z</m>, then <m>x R z</m>. (Note that these don't necessarily have to be distinct.)
-          </p>
-        </li>
-      </dl>
-    </p>
-  </solution>
-</exercise>
-
-</page>
-<page>
-
-  <exercise workspace="1in">
-    <introduction>
-      <p>
-        For each of the following problems, consider the given relation <m>R</m> defined on a set <m>A</m>. Determine whether <m>R</m> satisfies any of the properties defined in Problem 4 above. If a property does not hold, say why.
-      </p>
-    </introduction>
-
-    <task>
-      <statement>
-        <p>
-          <m>R = \{(a,a), (b,b), (c,c), (d,d), (a,b), (b,a)\}</m> on the set <m>A = \{a,b,c,d\}</m>.
-        </p>
-      </statement>
-
-      <solution component="w1s">
-        <p>
-          The relation is reflexive, symmetric, and transitive. Clearly it is not irreflexive. Moreover, <m>R</m> is not antisymmetric because there is a distinct pair of elements <m>a,b</m> where <m>a R b</m> and <m>b R a</m> are both true.
-        </p>
-      </solution>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the relation defined on <m>A = \Z</m> as <m>x R y</m> if <m>|x-y|\lt1</m>.
-        </p>
-      </statement>
-
-      <solution component="w1s">
-        <p>
-          Since <m>x,y \in \Z</m>, <m>xRy \iff |x-y|\lt1 \iff x=y</m>. Then this relation is clearly going to be reflexive, symmetric, and transitive.
-        </p>
-      </solution>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the relation defined on <m>A = \Z</m> where we declare <m>x R y</m> if and only if <m>x</m> and <m>y</m> have the same parity.
-        </p>
-      </statement>
-
-      <solution component="w1s">
-        <p>
-          This relation is reflexive because clearly <m>x</m> will have the same parity as itself, so <m>x R x</m>. Also, <m>R</m> is symmetric because if <m>xRy</m>, so <m>x</m> and <m>y</m> have the same parity, then <m>y</m> and <m>x</m> will also have the same parity, so <m>yRx</m>. The relation is transitive because if <m>xRy</m> and <m>yRz</m>, then <m>x</m> and <m>y</m> have the same parity and <m>y</m> and <m>z</m> have the same parity, so <m>x</m> and <m>z</m> thus have the same parity. Hence, <m>x R z</m>. (Notice that <m>R</m> is actually just congruence modulo 2.)
-        </p>
-      </solution>
-    </task>
-  </exercise>
-  <sidebyside widths="35% 65%">
-    <figure xml:id="fig-wkst-12-digraph">
-      <caption>A digraph</caption>
-      <image>
-        <shortdescription></shortdescription>
-        <prefigure xmlns="https://prefigure.org" label="2025-Worksheet-12-Ex-6-digraph">
-          <diagram dimensions="(200,200)" margins="5">
-            <definition>N=6</definition>
-            <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
-            <coordinates bbox="(-1.4,-1.1,1.4,1.1)">
-              <network directed="yes" scale="0.8"
-              node-fill="#ffffff" node-stroke="black"
-              seed="1" labels="yes" loop-scale="(0.6,0.6)"
-              tactile-node-size="40" node-size="10" >
-              <node at="1" p="f(0)" edges="[1,3,6,7]" loop-orientation="90"><m>a</m></node>
-              <node at="2" p="f(1)" edges="[2,4]" loop-orientation="0"><m>b</m></node>
-              <node at="3" p="(0,0)" edges="[5]"><m>c</m></node>
-              <node at="4" p="f(2)" edges="[5]"><m>d</m></node>
-              <node at="5" p="f(3)" edges="[5]" loop-orientation="270"><m>e</m></node>
-              <node at="6" p="f(4)" edges="[]"><m>f</m></node>
-              <node at="7" p="f(5)" edges="[6]"><m>g</m></node>
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-  </figure>
-  <exercise workspace="0.25in">
-    <introduction>
-      <p>
-        Answer the following questions about the digraph in <xref ref="fig-wkst-12-digraph"/>.
-      </p>
-
-    </introduction>
-
-    <task>
-      <statement>
-        <p>
-          Which vertex has the largest in-degree? What is the in-degree for that vertex?
-        </p>
-      </statement>
-
-      <solution component="w1s">
-        <p>
-          The vertex with the largest in-degree is <m>e</m>, which has degree <m>3</m>.
-        </p>
-      </solution>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Which vertex has the largest out-degree? What is the out-degree for that vertex?
-        </p>
-      </statement>
-
-      <solution component="w1s">
-        <p>
-          The vertex with the largest out-degree is <m>a</m>, which has degree <m>4</m>.
-        </p>
-      </solution>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          List all self-loops in the digraph.
-        </p>
-      </statement>
-
-      <solution component="w1s">
-        <p>
-          The self-loops in this digraph are <m>(a,a), (b,b), (e,e)</m>.
-        </p>
-      </solution>
-    </task>
-  </exercise>
-</sidebyside>
-<exercise workspace="0.25in">
-  <introduction>
-    <p>
-      Answer the following questions about the digraph in <xref ref="fig-wkst-12-digraph"/>.
+      Webster’s method is a divisor method. It starts from a population vector
+      <m>p=(p_1,p_2,p_3)</m> and a seat total <m>M=4</m>.
+      A divisor <m>d&gt;0</m> is chosen and quotas are defined by
+      <m>q_i=p_i/d</m>.
     </p>
 
-  </introduction>
-  <task>
-    <statement>
-      <p>
-        Is the sequence <m>\langle b,d,e,e\rangle</m> a walk in the graph? If so, is it an open walk?
-      </p>
-    </statement>
+    <definition xml:id="webster-rounding">
+      <title>Webster Rounding Rule</title>
+      <statement>
+        <me>
+          \operatorname{W}(u)=\lfloor u+\tfrac12 \rfloor
+        </me>
 
-    <solution component="w1s">
-      <p>
-        Yes, this sequence is a walk, and it is an open walk because the first and last vertices (<m>b</m> and <m>e</m>, respectively) are different.
-      </p>
-    </solution>
-  </task>
+        <p>
+          (Tie-breaking conventions may vary.)
+        </p>
+      </statement>
+    </definition>
 
-  <task>
-    <statement>
-      <p>
-        Is the sequence <m>\langle a,c,f,g \rangle</m> a walk in the graph? If so, is it an open or closed walk? Is it a trail, path, circuit, or cycle?
-      </p>
-    </statement>
+    <exercise xml:id="webster-divisor-effect">
+      <statement>
+        <p>
+          Explain what happens to the quotas <m>q_i=p_i/d</m> and to the rounded allocation when:
+        </p>
 
-    <solution component="w1s">
-      <p>
-        This sequence is not a walk because <m>(c,f)</m> is not an edge in the given graph. Since this is not a walk, it automatically cannot be an open or closed walk, or a trail, path, circuit, or cycle.
-      </p>
-    </solution>
-  </task>
+        <ol>
+          <li>The divisor <m>d</m> increases.</li>
+          <li>The divisor <m>d</m> decreases.</li>
+        </ol>
+      </statement>
+    </exercise>
 
-  <task>
-    <statement>
-      <p>
-        Is the sequence <m>\langle a,a,c,e,e \rangle</m> a walk in the graph? If so, is it an open or closed walked? Is it a trail, path, circuit, or cycle?
-      </p>
-    </statement>
-  </task>
-</exercise>
+    <exercise xml:id="webster-intervals">
+      <statement>
+        <p>
+          Fix an integer allocation <m>m</m>. Webster requires, for each coordinate,
+        </p>
+
+        <me>
+          m_i-\tfrac12 \le \frac{p_i}{d} &lt; m_i+\tfrac12.
+        </me>
+
+        <p>
+          Solve these inequalities for <m>d</m> and describe the condition for a single
+          divisor to satisfy all three inequalities simultaneously.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="webster-geometry">
+      <statement>
+        <p>
+          Explain why Webster’s method can be viewed geometrically as selecting which
+          rounding slab the scaled quota vector <m>q=p/d</m> falls into,
+          subject to a single shared scaling factor.
+        </p>
+      </statement>
+    </exercise>
+
+  </section>
+
+  <!-- ===================================================== -->
+  <section xml:id="webster-algorithm">
+    <title>Algorithm for Finding the Webster Divisor</title>
+
+    <p>
+      One practical way to compute Webster’s method is by bisection on the divisor.
+    </p>
+
+    <procedure xml:id="webster-bisection">
+      <title>Bisection Algorithm</title>
+
+      <step>
+        Choose <m>d_{\text{low}}</m> small enough that
+        <m>\sum_i \operatorname{W}(p_i/d_{\text{low}}) &gt; 4</m>.
+      </step>
+
+      <step>
+        Choose <m>d_{\text{high}}</m> large enough that
+        <m>\sum_i \operatorname{W}(p_i/d_{\text{high}}) &lt; 4</m>.
+      </step>
+
+      <step>
+        Repeat:
+        <me>
+          d_{\text{mid}}=\frac{d_{\text{low}}+d_{\text{high}}}{2}
+        </me>
+
+        <p>
+          Compute <m>S(d_{\text{mid}})=\sum_i \operatorname{W}(p_i/d_{\text{mid}})</m>.
+        </p>
+
+        <ul>
+          <li>If <m>S(d_{\text{mid}})&gt;4</m>, increase the divisor.</li>
+          <li>If <m>S(d_{\text{mid}})&lt;4</m>, decrease the divisor.</li>
+          <li>If <m>S(d_{\text{mid}})=4</m>, stop.</li>
+        </ul>
+      </step>
+    </procedure>
+
+    <exercise xml:id="webster-monotonicity">
+      <statement>
+        <p>
+          Explain why increasing the divisor usually decreases the total number of seats assigned.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="webster-example">
+      <statement>
+        <p>
+          Work through a numerical example (provided by your instructor).
+          Show your bisection steps and final allocation.
+        </p>
+      </statement>
+    </exercise>
+
+  </section>
+
+  <!-- ===================================================== -->
+  <conclusion>
+    <p>
+      In this activity you explored two apportionment methods as geometric functions.
+      Hamilton’s method partitions the simplex using remainder comparisons,
+      while Webster’s method partitions quota space using rounding thresholds controlled by a global scale.
+    </p>
+  </conclusion>
 
 </page>
 </worksheet>

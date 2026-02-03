@@ -27,6 +27,8 @@
             />
     <target name="pdf" standalone="yes" format="pdf"
             output-dir="pdfs" publication="publication_standalone.ptx" />
+
+    <target name="web" format="html" source="main.ptx" publication="publication.ptx" output-dir="web" />
   </targets>
 </project>
 

@@ -595,37 +595,163 @@
 
 </subsection>
 
-<subsection>
-    <title>Paradoxes (next class!)</title>
-
+<subsection><title>Paradoxes (colloquially)</title>
+    <definition>
+    <title>Named Paradoxes</title>
     <dl>
         <li>
-            <title>Quota paradox</title>
+            <title><term>Quota paradox</term></title>
             <p>
-                This paradox occurs when a state is assigned a number of seats that lies outside its quota—that is, it receives fewer than its lower quota or more than its upper quota. A state’s lower quota is the whole number part (floor) of its standard quota, and its upper quota is the next integer (ceiling). Any apportionment method that violates this rule is said to exhibit the quota paradox. While Hamilton’s method always satisfies the quota rule, several divisor methods can, in certain situations, assign a state a number of seats outside its quota.
+                If there exists an apportionment problem where an apportionment method assigns a state fewer than its lower quota of seats (or more than its upper quota), that method is said to exhibit the quota paradox.
             </p>
         </li>
         <li>
-            <title>Alabama paradox</title>
+            <title><term>Alabama paradox</term></title>
             <p>
-                This paradox occurs when a state gets apportioned fewer seats simply because the total number of seats being apportioned has increased. Under Hamilton’s method, increasing the house size can reshuffle the residues (fractional parts) of the standard quotas; some states can move ahead of others in the priority order for surplus seats, and a state can lose a seat it previously had. A famous historical instance arose in the 1880s when proposed U.S. House sizes led to Alabama receiving fewer seats when the House size increased by one.
-            </p>
-        </li>
-
-        <li>
-            <title>Population paradox</title>
-            <p>
-                This paradox occurs when a state gets apportioned fewer seats simply because its population has increased. More specifically, it describes situations in which state X loses a seat to state Y even though X grew in population at a higher rate than Y. Under Hamilton’s method, changes in populations can change residues and the surplus-seat priority order in a way that produces this outcome.
+                This paradox occurs when a state gets apportioned fewer seats simply because the total number of seats being apportioned has increased.
             </p>
         </li>
 
         <li>
-            <title>New-states paradox</title>
+            <title><term>Population paradox</term></title>
             <p>
-                This paradox occurs when a state’s apportionment is affected simply by virtue of the fact that a new state (together with its fair share of seats) has been added to the computation. Historically, when Oklahoma joined the Union in 1907, the House size was increased to accommodate Oklahoma’s fair share, but the recalculated apportionment still shifted seats among existing states (for example, Maine gained a seat while New York lost one).
+                This paradox occurs when a state <m>A</m> gets apportioned fewer seats than <m>B</m> when the population of <m>A</m> has increased more rapidly than the population of <m>B</m>.
+            </p>
+        </li>
+
+        <li>
+            <title><term>New-states paradox</term></title>
+            <p>
+                This paradox occurs when a state's apportionment is affected when a new state (together with its fair share of seats) has been added to the computation.
             </p>
         </li>
     </dl>
+</definition>
+
+   <example><title>Paradox Analysis</title>
+    <statement>
+        <p>The Intergalactic Congress Apportionments of 2525 and 2535 exhibit one of the paradoxes. Which one?</p>
+    <table>
+ <title>Intergalactic Congress: Apportionment of 2525</title>
+ <tabular>
+  <row><cell>Planet</cell><cell>Population</cell><cell>Standard quota</cell><cell>Lower quota</cell><cell>Surplus</cell><cell>Apportionment</cell></row>
+  <row><cell>Alanos</cell><cell>150</cell><cell>8.3</cell><cell>8</cell><cell>0</cell><cell>8</cell></row>
+  <row><cell>Betta</cell><cell>78</cell><cell>4.3</cell><cell>4</cell><cell>0</cell><cell>4</cell></row>
+  <row><cell>Conii</cell><cell>173</cell><cell>9.61</cell><cell>9</cell><cell>1</cell><cell>10</cell></row>
+  <row><cell>Dugos</cell><cell>204</cell><cell>11.3</cell><cell>11</cell><cell>0</cell><cell>11</cell></row>
+  <row><cell>Ellisium</cell><cell>295</cell><cell>16.38</cell><cell>16</cell><cell>1</cell><cell>17</cell></row>
+  <row><cell>Total</cell><cell>900</cell><cell>50.00</cell><cell>48</cell><cell>2</cell><cell>50</cell></row>
+</tabular>
+</table>
+
+<table>
+ <title>Intergalactic Congress: Apportionment of 2535</title>
+ <tabular>
+  <row><cell>Planet</cell><cell>Population</cell><cell>Standard quota</cell><cell>Lower quota</cell><cell>Surplus</cell><cell>Apportionment</cell></row>
+  <row><cell>Alanos</cell><cell>150</cell><cell>8.25</cell><cell>8</cell><cell>0</cell><cell>8</cell></row>
+  <row><cell>Betta</cell><cell>78</cell><cell>4.29</cell><cell>4</cell><cell>Second</cell><cell>5</cell></row>
+  <row><cell>Conii</cell><cell>181</cell><cell>9.96</cell><cell>9</cell><cell>First</cell><cell>10</cell></row>
+  <row><cell>Dugos</cell><cell>204</cell><cell>11.22</cell><cell>11</cell><cell>0</cell><cell>11</cell></row>
+  <row><cell>Ellisium</cell><cell>296</cell><cell>16.28</cell><cell>16</cell><cell>0</cell><cell>16</cell></row>
+  <row><cell>Total</cell><cell>909</cell><cell>50.00</cell><cell>48</cell><cell>2</cell><cell>50</cell></row>
+</tabular>
+</table>
+</statement>
+</example>
+</subsection>
+<subsection><title>Google NotebookLM</title>
+
+<p> 
+    To dig into the primary source literature about a famous apportionment lawsuit, you will use Google NotebookLM as described in class.
+</p>
+<exercise>
+    <title> NotebookLM set-up</title>
+    <statement> 
+        <ul>
+            <li>
+                <p>
+                    One of your group members should use their Hamilton email account to log in at <url href="https://notebooklm.google.com/">Google NotebookLM</url>, then click <q>Create New</q>. That group members should also upload the SCOTUS transcript and SCOTUS opinion. Name the notebook something recognizable, like <q>SCOTUS Apportionment</q>. 
+                </p>
+                <p>
+                    You might also like to add additional webpages from the U.S. Census Bureau (see Links of Interest below) and the paper on Blackboard by David McCune, but these are optional (and you can toggle whether the notebook interface uses them to respond to a question by clicking the checkboxes on or off.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The creator of the notebook should share it by adding the Hamilton email addresses of the other group members, with access to the full notebook.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Each group member will come up with a question they would like NotebookLM to answer about the source material, then save the reponse to the question as a note.
+                </p>
+            </li>
+            <li>
+                <p>
+                   Finally, each group member will share their question and answer on the course blog, plus their strategy for fact-checking the answer and an assessment of how well NotebookLM did.
+               </p>
+           </li>
+       </ul>
+   </statement>
+</exercise>
+<p> 
+    This is just our first foray into using a generative AI tool to enhance our learning. We will develop more skills to interact with NotebookLM throughout the course.
+</p>
+</subsection>
+
+<subsection>
+    <title>Exercises</title>
+
+    <exercise><title>Other Means</title>
+    <statement>
+        <ol>
+            <li>
+                <p> 
+                    The Huntington-Hill method uses the geometric mean, 
+                    <me>
+                        c(L,U) = \sqrt{LU},
+                    </me>
+                    which generalizes for more than two numbers as 
+                    <me>
+                        c(a_1,a_2,\cdots,a_n) = \sqrt[n]{a_1 a_2 \cdots a_n}.
+                    </me> 
+                    What if we modify Huntington Hill to use
+                    <me>
+                        c(L_s,Q_s,U_s) = \sqrt[3]{L_sQ_sU_s}
+                    </me>
+                    where <m>Q_s</m> is the quota for State <m>s</m> from the standard divisor? Try on the coffee data set.
+                </p>
+            </li>
+            <li>
+                <p> 
+                    There are two other means we could try, too. The Harmonic Mean is given by 
+                    <me>
+                        h(L_s,U_s)= \dfrac{2 L_s U_s}{L_s + U_s},
+                    </me>
+                    and the Quadratic Mean is given by
+                    <me>
+                        p(L_s,U_s) = \sqrt{\dfrac{L_s^2+U_s^2}{2}}.
+                    </me>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Apply these to the coffee data.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Describe/invent how to generalize each of these to more than two numbers.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Visit <image source="https://commons.wikimedia.org/wiki/File:01-Mittlere_Proportionale.gif" /> and see if you can make a geometric argument for the geometric mean.
+                </p>
+            </li>
+        </ol>
+    </statement>
+</exercise>
 </subsection>
 <!--  -->
     </section>
